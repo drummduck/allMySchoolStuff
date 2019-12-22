@@ -1,0 +1,388 @@
+//Nathan Donaldson/ndonalds
+//CS4400 Lab3
+
+#include "cachelab.h"
+#include <math.h>
+#include <getopt.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <strings.h>
+#include <unistd.h>
+#include <stdint.h>
+
+typedef unsigned long long int mem_add;
+
+
+typedef struct  //All of the paramater of the cache.
+{
+  int s;  //number of set index bits(log2S)
+  int b;  //number of block offset bits
+  int S;  //number of cache sets
+  int B;  //cache block size
+  int E;  //number of blocks per set
+  int C;  //cache capacity
+  int t;  //number of tag bits(m-s-b)
+  int m;  //number of main memory address bits
+
+  int hits;
+  int misses;
+  int evicts;
+}
+  mem_stats;
+
+typedef struct   //The line of the set.
+{
+  int LRU;
+  int valid;
+  int tag;
+}
+  set_line;
+
+typedef struct   //The set of the cache.
+{
+  set_line *lines;
+}
+ cache_set;
+
+typedef struct   //The whole cache.
+{
+  cache_set *sets;
+}
+  cache;
+
+void help(char* argv[])
+{
+  printf("Usage: %s [-hv] -s <num> -E <num> -b <num> -t <file>\n",argv[0]);
+    printf("Options:\n");
+    printf("  -h         Print this help message\n");
+    printf("  -v         Optional verbose flag\n");
+    printf("  -s <num>   Number of set index bits\n");
+    printf("  -E <num>   Number of lines per set\n");
+    printf("  -b <num>   Number of block offset bits\n");
+    printf("  -t <file>  Trace file\n");
+    printf("\n");
+    printf("Examples:\n");
+    printf("%s  linux>    ./csim-ref -s 4 -E 1 -b 4 -t traces/yi.trace\n",argv[0]);
+    printf("%s  linux>    ./csim-ref -v -s 8 -E 2 -b 4 -t traces/yi.trace\n",argv[0]);
+   
+}
+
+cache build(int num_sets, int num_lines)
+{
+  cache build_cache; //cache to return
+  cache_set set;  //set to initianitialize then set equal to cache set line
+  set_line line;
+
+  int set_count;  //used with input so we create just enough space.
+  int line_count;
+
+   build_cache.sets = (cache_set *) malloc(sizeof(cache_set) * num_sets);
+
+  for(set_count = 0; set_count < num_sets; set_count++)
+    {
+      set.lines = (set_line *) malloc(sizeof(set_line) * num_lines);
+      build_cache.sets[set_count] = set;
+
+      for(line_count = 0; line_count < num_lines; line_count++)
+	{
+	  line.LRU = 0;
+	  line.valid = 0;
+	  line.tag = 0;
+	  set.lines[line_count] = line;
+	}
+
+    }
+  
+  return build_cache;
+}
+
+
+mem_stats calculate(mem_add address,cache test_cache,mem_stats stats, int v)
+{
+
+  int tag_size = (64 - (stats.b + stats.s));
+  unsigned long long int tag = address >> (stats.b + stats.s);
+  unsigned long long int temp = address << tag_size;
+  unsigned long long int set_index = temp  >> (tag_size + stats.b);
+
+  cache_set set;
+  set_line line;
+  set_line line_2;
+  int max_LRU;
+  int min_LRU_index;
+  int min_LRU;
+  
+  set = test_cache.sets[set_index];
+  
+  int num_lines = stats.E;
+  int line_counter;
+  int inner_line_counter;
+
+  for(line_counter = 0; line_counter < num_lines; line_counter++)
+    {
+      line = set.lines[line_counter];
+
+      if(line.valid == 1)
+	{
+
+
+
+	  if(line.tag == tag)
+	    {
+	  stats.hits++;
+	 
+          line_2 = set.lines[0];
+	  max_LRU = line_2.LRU;
+      
+      
+      for(inner_line_counter = 1; inner_line_counter < num_lines; inner_line_counter++)
+	{
+	  line_2 = set.lines[inner_line_counter];
+	  
+	  if(max_LRU < line_2.LRU)
+	    {
+	      max_LRU = line_2.LRU;
+	    	      
+	    }
+	}
+         
+	  line.LRU = max_LRU + 1;
+	  if(v == 1)
+	    {
+	      printf(" Hit");
+	    }
+	  return stats;
+	    }
+	}
+    
+      
+    }
+
+
+ for(line_counter = 0; line_counter < num_lines; line_counter++)
+    {
+      line = set.lines[line_counter];
+
+      if(line.valid == 0)
+	{
+
+
+	  line.valid = 1;
+	  line.tag = tag;
+	  stats.misses++;
+	 
+          line_2 = set.lines[0];
+	  max_LRU = line_2.LRU;
+      
+      
+      for(inner_line_counter = 1; inner_line_counter < num_lines; inner_line_counter++)
+	{
+	  line_2 = set.lines[inner_line_counter];
+	  
+	  if(max_LRU < line_2.LRU)
+	    {
+	      max_LRU = line_2.LRU;
+	    	      
+	    }
+	}
+         
+	  line.LRU = max_LRU + 1;
+	  if(v == 1)
+	    {
+	      printf(" Miss");
+	    }
+	  return stats;
+	
+	}
+      
+    }
+
+
+
+
+  
+      line_2 = set.lines[0];
+      min_LRU_index = 0;
+      min_LRU = line_2.LRU;
+      max_LRU = line_2.LRU;
+      
+      
+      for(line_counter = 1; line_counter < num_lines; line_counter++)
+	{
+	  line_2 = set.lines[line_counter];
+	  
+	  if(max_LRU < line_2.LRU)
+	    {
+	      max_LRU = line_2.LRU;
+	    	      
+	    }
+	}
+
+         for(line_counter = 1; line_counter < num_lines; line_counter++)
+      	{
+      	  line_2 = set.lines[line_counter];
+	  
+      	  if(min_LRU > line_2.LRU)
+      	    {
+            
+	      min_LRU = line_2.LRU;
+	      min_LRU_index = line_counter;
+	      
+          }
+      	}
+	 
+	 line = set.lines[min_LRU_index];
+	 line.LRU = max_LRU + 1;
+	 stats.misses++;
+	 stats.evicts++;
+	 if(v == 1)
+	   {
+	 printf(" Miss");
+	 printf(" Evict");
+	   }
+	 return stats;
+  
+}
+
+int main(int argc, char **argv )
+{
+
+  cache test_cache;   //Our cache
+
+  mem_stats stats;   //Our cache info
+
+  FILE *file_read;  //Will be used to read the trace file.
+
+  char arg;
+
+  char cmd;
+
+  int size;
+
+  mem_add  address;
+
+  char *trace_file;  //The trace file.
+
+  int v;
+ 
+
+  while((arg=getopt(argc,argv,"s:E:b:t:hv")) != -1)
+    {
+      switch(arg)
+	{
+	case 's':
+	  stats.s = atoi(optarg);
+	   printf("%d",stats.s);
+	  break;
+	case 'E':
+	  stats.E = atoi(optarg);
+	    printf("%d",stats.E);
+	  break;
+	case 'b':
+	  stats.b = atoi(optarg);
+	  	  printf("%d",stats.b);
+	  break;
+	case 't':
+	  trace_file = optarg;
+	    printf("%s",trace_file);
+	  break;
+	case 'v':
+	  v = 1;
+	  	  printf("%d",v);
+	  break;
+	case'h':
+	  help(argv);
+	    printf("YOU HAVE REACHED CASE H");
+	    exit(0);
+	  break;
+	default:
+	  help(argv);
+	   printf("YOU HAVE REACHED DEFAULT");
+	  exit(1);
+	  break;
+	}
+    }  
+
+
+  if(stats.E == 0 || stats.b == 0 || stats.s == 0 || trace_file == NULL)
+    {
+      printf("%s:Arguments cannot be 0 or NULL\n",argv[0]);
+      //  printf("%d\n",stats.s);
+      // printf("%d\n",stats.E);
+      //  printf("%d\n",stats.b);
+      // printf("%s\n",trace_file);
+      // printf("%d\n",v);
+
+      help(argv);
+      exit(1);
+    }
+
+  //Setting all the stats.
+
+  stats.S  = pow(2,stats.s);
+
+  stats.B  = pow(2,stats.b);
+
+  stats.m = 64;
+
+  stats.t = (stats.m - stats.s - stats.b);
+
+  stats.C = (stats.S * (stats.E * stats.B));
+
+  stats.hits = 0;
+  stats.misses = 0;
+  stats.evicts = 0;
+
+  test_cache = build(stats.S, stats.E);
+  
+  file_read = fopen(trace_file,"r");  
+  
+ 
+  if(file_read != NULL)
+    {
+      while(fscanf(file_read, " %c %llx,%d", &cmd, &address, &size) == 3)
+	{
+	  printf("\n");
+	switch(cmd)
+	  {
+	 case 'I':
+	   if(v == 1)
+	     {
+	       printf("%s %llx, %d", &cmd, address, size);
+	     }
+	    break;
+	 case 'M':
+             if(v == 1)
+	     {
+	       printf("%s %llx, %d", &cmd, address, size);
+	     }
+	    stats = calculate(address,test_cache,stats,v);
+	    stats =  calculate(address,test_cache,stats,v);
+	    break;
+	 case 'L':
+	     if(v == 1)
+	     {
+	       printf("%s %llx, %d", &cmd, address, size);
+	     }
+	    stats =  calculate(address,test_cache,stats,v);
+	    break;
+	 case 'S':
+	    if(v == 1)
+	     {
+	       printf("%s %llx, %d", &cmd, address, size);
+	     }
+	   stats = calculate(address,test_cache,stats,v);
+	    break;
+	  default:
+	    break;
+	  }
+
+	}
+    }
+  printf("\n");
+  printSummary(stats.hits,stats.misses, stats.evicts);
+  fclose(file_read);
+    return 0;
+}
+
+
