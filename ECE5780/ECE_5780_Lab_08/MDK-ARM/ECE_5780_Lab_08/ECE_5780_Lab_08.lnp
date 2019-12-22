@@ -1,0 +1,23 @@
+--cpu Cortex-M0
+"ece_5780_lab_08\stm32f0xx_hal_flash.o"
+"ece_5780_lab_08\stm32f0xx_hal_dma.o"
+"ece_5780_lab_08\stm32f0xx_hal_i2c.o"
+"ece_5780_lab_08\stm32f0xx_hal_pwr.o"
+"ece_5780_lab_08\stm32f0xx_hal.o"
+"ece_5780_lab_08\stm32f0xx_hal_rcc.o"
+"ece_5780_lab_08\stm32f0xx_hal_i2c_ex.o"
+"ece_5780_lab_08\stm32f0xx_hal_gpio.o"
+"ece_5780_lab_08\stm32f0xx_hal_pwr_ex.o"
+"ece_5780_lab_08\stm32f0xx_hal_cortex.o"
+"ece_5780_lab_08\stm32f0xx_hal_flash_ex.o"
+"ece_5780_lab_08\stm32f0xx_hal_rcc_ex.o"
+"ece_5780_lab_08\main.o"
+"ece_5780_lab_08\stm32f0xx_it.o"
+"ece_5780_lab_08\stm32f0xx_hal_msp.o"
+"ece_5780_lab_08\motor.o"
+"ece_5780_lab_08\system_stm32f0xx.o"
+"ece_5780_lab_08\startup_stm32f072xb.o"
+--library_type=microlib --strict --scatter "ECE_5780_Lab_08\ECE_5780_Lab_08.sct"
+--diag_suppress=L6329 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "ECE_5780_Lab_08.map" -o ECE_5780_Lab_08\ECE_5780_Lab_08.axf

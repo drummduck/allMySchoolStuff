@@ -1,0 +1,62 @@
+int main(void)
+{
+
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* Configure the system clock */
+  SystemClock_Config();
+	
+	uint32_t f = 1000;
+	SysTick_Config(HAL_RCC_GetHCLKFreq()/f);
+	NVIC_EnableIRQ(SysTick_IRQn);
+	NVIC_SetPriority(SysTick_IRQn, 0);
+	
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN;
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	RCC->APB2ENR |= RCC_APB2ENR_SYSCFGCOMPEN;
+	EXTI->IMR |= (1 << 0);
+	EXTI->RTSR |= (1 << 0);
+	NVIC_EnableIRQ(EXTI0_1_IRQn);
+	NVIC_SetPriority(EXTI0_1_IRQn, 1);
+	
+	GPIOA->PUPDR |= (1 << 1);
+	GPIOC->MODER |= (1 << 12) | (1 << 14) | (1 << 16) | (1 << 18);
+	GPIOC->ODR |= (1 << 6) | (1 << 8);
+				
+  while (1)
+  {
+		__WFI();
+	}
+}
+
+void EXTI0_1_IRQHandler(void)
+{	
+	int count = 0;
+	while(1)
+	{
+		if(count == 1000000)
+		{
+			EXTI->PR |= (1 << 0);
+			GPIOC->ODR ^= (1 << 6) | (1 << 7);	
+			count = 0;
+		}
+		count++;
+	}
+}	
+
+
+void SysTick_Handler(void)
+{ 
+	if(count == 200)
+	{
+		GPIOC->ODR ^= (1 << 8) | (1 << 9);
+		count = 0;
+	}
+	
+  HAL_IncTick();
+  HAL_SYSTICK_IRQHandler();
+	
+	count++;
+
+}

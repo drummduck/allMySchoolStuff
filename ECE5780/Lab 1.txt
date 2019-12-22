@@ -1,0 +1,20 @@
+What are the GPIO control registers that the lab mentions?
+
+What values would you want to write to the bits controlling a pin in the GPIOx_MODER register in order to set it to analog mode?
+
+Examine the bit descriptions in GPIOx_BSSR register, what bit would you want to set to clear the fourth bit in the ODR?
+
+Perform the following bitwise operations:
+	0xAD | 0xC7 = ?
+	0xAD & 0xC7 = ?
+	0xAD & ~(0xC7) = ?
+	0xAD ^ 0xC7 = ?
+
+How would you clear the 5th and 6th bits in a register while leaving the other's alone?
+
+What is the maximum speed the STM32F072R8 GPIO pins can handle in the lowest speed setting?
+
+What RCC register would you manipulate to enable the following peripherals:
+	TIM1(TIMER1)
+	DMA1
+	I2C1were a

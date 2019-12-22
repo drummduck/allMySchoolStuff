@@ -1,0 +1,221 @@
+Below is the code i used for the post lab, basically it reads input from the keyboard and appends each char as a string constant.
+After a \r is hit, it saves which color LED the string constant represents by doing a strcmp and then waits for another string constant ended with a \r.
+It then does the same thing for the second input. If neither are correct commands, it notifies the user and resets. I used an append function,
+the interrupt, and the main while loop. The append function appended the char from the keyboard to the end of a string constant. The interrupt
+divided each command up, and the main while loop did the string compares for the different commands.
+
+
+
+
+
+
+#include "main.h"
+#include "stm32f0xx_hal.h"
+#include <string.h>
+#include <stdlib.h>
+int first = 0;
+char Rreg;
+int flag;
+char *color = "";
+char *command = "";
+
+void SystemClock_Config(void);
+void Error_Handler(void);
+void charTrans(char x);
+void stringTrans(char word[]);
+char* append(char* dest, char source);
+
+int main(void)
+{
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* Configure the system clock */
+  SystemClock_Config();
+
+	
+
+	NVIC_EnableIRQ(USART3_4_IRQn);
+	NVIC_SetPriority(USART3_4_IRQn, 0);
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; //ENABLE GPIOC clock
+	RCC->APB1ENR |= (1 << 18); //Enable clock to USART3
+	USART3->BRR = HAL_RCC_GetHCLKFreq()/9600;  //Baud rate
+	USART3->CR1 |= (1 << 2) | (1 << 3) | (1 << 0) | (1 << 5); //enable RX/TX/USART3/interrupt
+	GPIOC->MODER |= (1 << 12) | (1 << 14) | (1 << 16) | (1 << 18); //LED general purpose output
+	GPIOC->MODER |= (1 << 9) | (1 << 11);	//USART3 RX/TX lines alternate I/O for PC4(TX) and PC5(RX)
+	GPIOC->AFR[0] |= (1 << 16) | (1 << 20); //Setting pins PC4 and PC5 to AF1   
+
+	
+
+	
+	stringTrans("\r\nCMD?\r\n");
+	int secondCommand = 0;
+	int LED;
+
+				
+  	while (1)
+  	{
+		if(flag && secondCommand)
+		{
+			 if(strcmp(command, "0") == 0)
+			 {
+				 GPIOC->ODR &= ~(1 << LED);
+				 stringTrans(color);
+				 stringTrans("Off\r\n");
+				 stringTrans("CMD?\r\n");
+				 color = "";
+				 command = "";
+				 secondCommand = 0;
+				 flag = 0;
+			 }
+				 
+			 else if(strcmp(command, "1") == 0)
+			 {
+				 GPIOC->ODR |= (1 << LED);
+				 stringTrans(color);
+				 stringTrans("On\r\n");
+				 stringTrans("CMD?\r\n");
+				 color = "";
+				 command = "";
+				 secondCommand = 0;
+				 flag = 0;
+			 }
+				 
+			 else if(strcmp(command, "2") == 0)
+			 {
+				 GPIOC->ODR ^= (1 << LED);
+				 stringTrans(color);
+				 stringTrans("Toggle\r\n");
+				 stringTrans("CMD?\r\n");
+				 color = "";
+				 command = "";
+				 secondCommand = 0;
+				 flag = 0;
+			 }
+
+			 else
+			 {
+				 stringTrans("Undefined command\r\n");
+				 stringTrans("CMD?\r\n");
+				 color = "";
+				 command = "";
+				 secondCommand = 0;
+				 flag = 0;
+			 }
+		}
+	
+		
+		else if(flag)
+	 	{
+			if(strcmp(color, "red") == 0)
+			{
+				 LED = 6;
+				 color = "Red ";
+				 secondCommand = 1;
+				 flag = 0;
+			}
+					 
+			else if(strcmp(color, "blue") == 0)
+			{
+				 LED = 7;
+				 color = "Blue ";
+				 secondCommand = 1;
+				 flag = 0;
+			}				 
+	
+			else if(strcmp(color, "orange") == 0)
+			{	
+				 LED = 8;
+				 color = "Orange ";
+				 secondCommand = 1;
+				 flag = 0;
+			}			 
+				 
+			else if(strcmp(color, "green") == 0)
+			{
+				 LED = 9;
+				 color = "Green ";
+				 secondCommand = 1;
+				 flag = 0;
+			}
+
+			else
+			{
+				 stringTrans("Undefined command\r\n");
+				 stringTrans("CMD?\r\n");
+				 color = "";
+				 first = 0;
+				 flag = 0;
+			}				 
+		}
+	}
+
+}
+
+
+void charTrans(char x)
+{
+	while((USART3->ISR & (1 << 7)) == 0)
+	{
+		
+	}
+	USART3->TDR = x;
+}
+
+void stringTrans(char word[])
+{
+	int i = 0;	
+	while(1)
+	{
+		if(word[i] != '\0')
+		{			
+			charTrans(word[i]);
+			i++;
+		}
+		else break;
+	}
+}
+
+
+void  USART3_4_IRQHandler(void)
+{
+	Rreg = USART3->RDR;
+	charTrans(Rreg);
+	
+	if(!first)
+	{	
+		if(Rreg == '\r')
+		{
+			charTrans('\n');
+			first = 1;
+			flag = 1;
+		}
+		else 
+		{
+			color = append(color, Rreg);
+		}
+	}
+	
+	else
+	{
+		if(Rreg == '\r')
+		{
+			charTrans('\n');
+			first = 0; 
+			flag = 1;
+		}
+		else command = append(command, Rreg);
+	}
+}
+
+char * append(char *orig, char c)
+{
+    size_t len = strlen(orig);
+    char *str2 = malloc(len + 1 + 1 ); /* one for extra char, one for trailing zero */
+	
+    strcpy(str2, orig);		
+    str2[len] = c;
+    str2[len + 1] = '\0';
+		return str2;
+		
+}

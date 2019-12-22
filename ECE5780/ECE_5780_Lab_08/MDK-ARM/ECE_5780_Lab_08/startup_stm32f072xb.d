@@ -1,0 +1,1 @@
+ece_5780_lab_08\startup_stm32f072xb.o: startup_stm32f072xb.s

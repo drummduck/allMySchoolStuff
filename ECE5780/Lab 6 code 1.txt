@@ -1,0 +1,74 @@
+int main(void)
+{
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* Configure the system clock */
+  SystemClock_Config();
+	RCC->AHBENR |= RCC_AHBENR_GPIOCEN; //enable GPIOC
+	RCC->APB2ENR |= (1 << 9); //Enable ADC clock
+	GPIOC->MODER |= (1 << 12) | (1 << 14) | (1 << 16) | (1 << 18); //Put LED's in output mode
+	GPIOC->MODER |= (1 << 1); //Put PC0 into alternate function mode
+	ADC1->CFGR1 |= (1 << 4) | (1 << 13); //ADC in 8 bit resolution and continuous conversion mode.
+	ADC1->CHSELR |= (1 << 10); //Select channel associated with PC0 for conversion
+	ADC1->CR &= ~(1 << 0);	//ADC enable off
+	ADC1->IER |= (1 << 0); //enable ADRDY interrupt
+	ADC1->CR |= (1 << 31); //ADCAL = 1, calibrate start
+	
+	
+	while(ADC1->CR & (1 << 31))	//Calibration done
+	{
+		
+	}
+	
+	ADC1->CR |= (1 << 0); //enable ADC
+	
+	while(!(ADC1->ISR & (1 << 0)))	//ADRDY flag set, ADC ready for operation.
+	{
+		
+	}
+	
+	ADC1->CR |= (1 << 2);
+	
+	while(1)
+	{	
+		if((ADC1->DR > 60))
+		{
+			GPIOC->ODR |= (1 << 6);
+			
+			if((ADC1->DR > 120))
+			{
+				GPIOC->ODR |= (1 << 7);
+				
+				if((ADC1->DR > 180))
+				{
+					GPIOC->ODR |= (1 << 8);
+					
+					if(ADC1->DR > 240)
+					{
+						GPIOC->ODR |= (1 << 9);
+					}
+				}
+			}
+		}
+		
+		if(ADC1->DR < 240)
+		{
+			GPIOC->ODR &= ~(1 << 9);
+			
+			if(ADC1->DR < 180)
+			{
+				GPIOC->ODR &= ~(1 << 8);
+				
+				if(ADC1->DR < 120)
+				{
+					GPIOC->ODR &= ~(1 << 7);
+					
+					if(ADC1->DR < 60)
+					{
+						GPIOC->ODR &= ~(1 << 6);
+					}
+				}
+			}
+			
+		}

@@ -1,0 +1,155 @@
+int main(void)
+{
+  /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
+  HAL_Init();
+
+  /* Configure the system clock */
+  SystemClock_Config();
+	
+  NVIC_EnableIRQ(USART3_4_IRQn);
+  NVIC_SetPriority(USART3_4_IRQn, 0);
+  RCC->AHBENR |= RCC_AHBENR_GPIOCEN; //ENABLE GPIOC clock
+  RCC->APB1ENR |= (1 << 18); //Enable clock to USART3
+  USART3->BRR = HAL_RCC_GetHCLKFreq()/9600;  //Baud rate
+  USART3->CR1 |= (1 << 2) | (1 << 3) | (1 << 0) | (1 << 5); //enable RX/TX/USART
+	
+  GPIOC->MODER |= (1 << 12) | (1 << 14) | (1 << 16) | (1 << 18); //LED general purpose output
+  GPIOC->MODER |= (1 << 9) | (1 << 11);	//USART RX/TX lines alternate I/O
+  GPIOC->AFR[0] |= (1 << 16) | (1 << 20);
+		
+  stringTrans("CMD?\r\n");
+  int secondCommand = 0;
+  int LED;
+  char *color = NULL;
+				
+  while (1)
+  {
+	if(flag && secondCommand)
+	{
+		switch(Rreg)
+		{
+			case '0':
+			{
+				GPIOC->ODR &= ~(1 << LED);
+				stringTrans(color);
+				stringTrans("Off\r\n");
+				stringTrans("CMD?\r\n");
+				secondCommand = 0;
+				flag = 0;
+				break;
+			}
+					 
+			case '1':
+			{
+				GPIOC->ODR |= (1 << LED);
+				stringTrans(color);
+				stringTrans("On\r\n");
+				stringTrans("CMD?\r\n");
+				secondCommand = 0;
+				flag = 0;
+				break;
+			}
+					 
+			case '2':
+			{
+				GPIOC->ODR ^= (1 << LED);
+				stringTrans(color);
+				stringTrans("Toggle\r\n");
+				stringTrans("CMD?\r\n");
+				secondCommand = 0;
+				flag = 0;
+				break;
+			}
+
+			default: 
+			{
+				stringTrans("Undefined command\r\n");
+				stringTrans("CMD?\r\n");
+				secondCommand = 0;
+				flag = 0;
+				break;
+			}
+		}
+	}
+		
+	else if(flag)
+	{
+		switch(Rreg)
+		{
+			case 'r':
+			{
+				LED = 6;
+				color = "Red ";
+				secondCommand = 1;
+				flag = 0;
+				break;
+			}
+					 
+			case 'b':
+			{
+				LED = 7;
+				color = "Blue ";
+				secondCommand = 1;
+				flag = 0;
+				break;
+			}
+					 
+			case 'o':
+			{
+				LED = 8;
+				color = "Orange ";
+				secondCommand = 1;
+				flag = 0;
+				break;
+		 	}
+				 
+			case 'g':
+			{
+				LED = 9;
+				color = "Green ";
+				secondCommand = 1;
+				flag = 0;
+				break;
+			}
+
+			default: 
+			{
+				stringTrans("Undefined command\r\n");
+				stringTrans("CMD?\r\n");
+				flag = 0;
+				break;
+			}
+		}
+	 }
+    } 
+}
+
+
+void charTrans(char x)
+{
+	while((USART3->ISR & (1 << 7)) == 0)
+	{
+		
+	}
+	USART3->TDR = x;
+}
+
+void stringTrans(char word[])
+{
+	int i = 0;	
+	while(1)
+	{
+		if(word[i] != '\0')
+		{			
+			charTrans(word[i]);
+			i++;
+		}
+		else break;
+	}
+}
+
+void  USART3_4_IRQHandler(void)
+{
+	Rreg = USART3->RDR;
+	flag = 1;
+}
