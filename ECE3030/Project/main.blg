@@ -1,0 +1,67 @@
+This is BibTeX, Version 0.99d (TeX Live 2017)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: bib.bib
+Warning--I didn't find a database entry for "PersonDigitalAssistants"
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty journal in perera2018multi
+Warning--empty journal in TalkingToSiri
+Warning--empty journal in AmazonRejects
+Warning--empty journal in SpeakMemory
+Warning--empty journal in Frames
+Warning--empty journal in Emotional
+Warning--empty year in LearningDeep
+Warning--empty journal in Spoken
+Warning--empty year in neuralStuff
+
+Done.
+You've used 45 entries,
+            4087 wiz_defined-function locations,
+            1074 strings with 14566 characters,
+and the built_in function-call counts, 25123 in all, are:
+= -- 1886
+> -- 350
+< -- 145
++ -- 218
+- -- 55
+* -- 1016
+:= -- 3903
+add.period$ -- 92
+call.type$ -- 45
+change.case$ -- 45
+chr.to.int$ -- 378
+cite$ -- 54
+duplicate$ -- 1977
+empty$ -- 2623
+format.name$ -- 59
+if$ -- 5982
+int.to.chr$ -- 0
+int.to.str$ -- 45
+missing$ -- 321
+newline$ -- 162
+num.names$ -- 45
+pop$ -- 839
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 2
+skip$ -- 2076
+stack$ -- 0
+substring$ -- 931
+swap$ -- 1250
+text.length$ -- 19
+text.prefix$ -- 0
+top$ -- 5
+type$ -- 45
+warning$ -- 9
+while$ -- 100
+width$ -- 47
+write$ -- 398
+(There were 10 warnings)
