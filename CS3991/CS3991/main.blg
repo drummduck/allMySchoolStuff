@@ -1,0 +1,16 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: main.aux
+The style file: IEEEtran.bst
+Database file #1: bib.bib
+-- IEEEtran.bst version 1.14 (2015/08/26) by Michael Shell.
+-- http://www.michaelshell.org/tex/ieeetran/bibtex/
+-- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
+Warning--empty booktitle in TheBest
+Warning--empty booktitle in TheBestToday
+Warning--empty year in TheBestToday
+Warning--empty author in Stats
+Warning--empty booktitle in Stats
+Warning--empty booktitle in History
+Warning--empty booktitle in ProgrammingLanguageTrends
+
+Done.
+(There were 7 warnings)
