@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Test_CPU_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="Test_CPU" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="29" />
+   <wvobject fp_name="/Test_CPU/uut/Guts/PC/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/state" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">state[3:0]</obj_property>
+      <obj_property name="ObjectShortName">state[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/nextstate" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nextstate[3:0]</obj_property>
+      <obj_property name="ObjectShortName">nextstate[3:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/IO/addrA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrA[14:0]</obj_property>
+      <obj_property name="ObjectShortName">addrA[14:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#00ffff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/PC/PC_Out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">PC_Out[15:0]</obj_property>
+      <obj_property name="ObjectShortName">PC_Out[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/IO/mem_doutA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem_doutA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">mem_doutA[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/op" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">op[7:0]</obj_property>
+      <obj_property name="ObjectShortName">op[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/inst" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">inst[7:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/PC/IMM_BUS" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">IMM_BUS[15:0]</obj_property>
+      <obj_property name="ObjectShortName">IMM_BUS[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/ALU_BUS_subA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ALU_BUS_subA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">ALU_BUS_subA[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/ALU/A" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">A[15:0]</obj_property>
+      <obj_property name="ObjectShortName">A[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/ALU/B" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">B[15:0]</obj_property>
+      <obj_property name="ObjectShortName">B[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/mem/enA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">enA</obj_property>
+      <obj_property name="ObjectShortName">enA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/mem/weA" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">weA</obj_property>
+      <obj_property name="ObjectShortName">weA</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/mem/dinA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dinA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dinA[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/mem/addrA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">addrA[14:0]</obj_property>
+      <obj_property name="ObjectShortName">addrA[14:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/IO/dinA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dinA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">dinA[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/Reg/Flags_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Flags_out[4:0]</obj_property>
+      <obj_property name="ObjectShortName">Flags_out[4:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/Read_Reg_BusA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Read_Reg_BusA[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Read_Reg_BusA[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Brains/Read_Reg_BusB" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">Read_Reg_BusB[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Read_Reg_BusB[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/Reg/reg7" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg7[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg7[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/Reg/reg8" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg8[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg8[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/Reg/reg9" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg9[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg9[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/Reg/reg10" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">reg10[15:0]</obj_property>
+      <obj_property name="ObjectShortName">reg10[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/IO/movementEnable" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">movementEnable[6:0]</obj_property>
+      <obj_property name="ObjectShortName">movementEnable[6:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="CustomSignalColor">#ff00ff</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/motorOps/nesControl2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">nesControl2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">nesControl2[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/motorOps/yAxisPointer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">yAxisPointer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">yAxisPointer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/motorOps/xAxisPointer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xAxisPointer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xAxisPointer[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Test_CPU/uut/Guts/motorOps/zAxisPointer" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">zAxisPointer[15:0]</obj_property>
+      <obj_property name="ObjectShortName">zAxisPointer[15:0]</obj_property>
+   </wvobject>
+</wave_config>

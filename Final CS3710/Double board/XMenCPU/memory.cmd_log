@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/Katie/Documents/CS 3710/XMenCPU/memory.xst" -ofn "C:/Users/Katie/Documents/CS 3710/XMenCPU/memory.syr" 
+xst -intstyle ise -ifn "C:/Users/Katie/Documents/CS 3710/XMenCPU/memory.xst" -ofn "C:/Users/Katie/Documents/CS 3710/XMenCPU/memory.syr" 

@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Interface Version="1" Minor="1">
+	<Ifc Id="ROOT" Top="1">
+		<Bus Id="mem_doutA">
+			<Port Id="15" Dir="OUT"/>
+			<Port Id="14" Dir="OUT"/>
+			<Port Id="13" Dir="OUT"/>
+			<Port Id="12" Dir="OUT"/>
+			<Port Id="11" Dir="OUT"/>
+			<Port Id="10" Dir="OUT"/>
+			<Port Id="9" Dir="OUT"/>
+			<Port Id="8" Dir="OUT"/>
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Bus Id="rgb">
+			<Port Id="7" Dir="OUT"/>
+			<Port Id="6" Dir="OUT"/>
+			<Port Id="5" Dir="OUT"/>
+			<Port Id="4" Dir="OUT"/>
+			<Port Id="3" Dir="OUT"/>
+			<Port Id="2" Dir="OUT"/>
+			<Port Id="1" Dir="OUT"/>
+			<Port Id="0" Dir="OUT"/>
+		</Bus>
+		<Port Id="clk" Dir="IN"/>
+		<Port Id="reset" Dir="IN"/>
+		<Port Id="ca" Dir="OUT"/>
+		<Port Id="cb" Dir="OUT"/>
+		<Port Id="cc" Dir="OUT"/>
+		<Port Id="cd" Dir="OUT"/>
+		<Port Id="ce" Dir="OUT"/>
+		<Port Id="cf" Dir="OUT"/>
+		<Port Id="cg" Dir="OUT"/>
+		<Port Id="an0" Dir="OUT"/>
+		<Port Id="an1" Dir="OUT"/>
+		<Port Id="an2" Dir="OUT"/>
+		<Port Id="an3" Dir="OUT"/>
+		<Port Id="expired" Dir="OUT"/>
+		<Port Id="hSync" Dir="OUT"/>
+		<Port Id="vSync" Dir="OUT"/>
+	</Ifc>
+</Interface>
+

@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "C:/Users/u0837708/CS3710/XMenCPU/RegFile.xst" -ofn "C:/Users/u0837708/CS3710/XMenCPU/RegFile.syr" 

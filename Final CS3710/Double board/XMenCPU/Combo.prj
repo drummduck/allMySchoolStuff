@@ -1,0 +1,7 @@
+verilog work "signextend.v"
+verilog work "RegFile.v"
+verilog work "ProgramCounter.v"
+verilog work "memory.v"
+verilog work "Buffer.v"
+verilog work "ALU_Module.v"
+verilog work "Combo.v"

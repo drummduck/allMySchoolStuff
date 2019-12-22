@@ -1,0 +1,13 @@
+
+# PlanAhead Generated IO constraints 
+
+#NET "CLK_IN1" IOSTANDARD = LVCMOS33;
+#NET "CLK_OUT1" IOSTANDARD = LVCMOS33;
+#NET "reset" IOSTANDARD = LVCMOS33;
+#
+## PlanAhead Generated physical constraints 
+#
+#NET "CLK_IN1" LOC = V10;
+#NET "reset" LOC = C4;
+#PIN "clkout1_buf.O" CLOCK_DEDICATED_ROUTE = FALSE;
+

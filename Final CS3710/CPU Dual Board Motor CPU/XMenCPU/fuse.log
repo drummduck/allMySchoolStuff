@@ -1,0 +1,54 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Test_CPU_isim_beh.exe -prj C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Test_CPU_beh.prj work.Test_CPU work.glbl 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/ipcore_dir/mainClock.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/nesController.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/MotorController.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/signextend.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/RegFile.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/ProgramCounter.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Motion.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/memoryController.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/memory.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Buffer.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/ALU_Module.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/FSM_Control.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Combo.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/CPU.v" into library work
+Analyzing Verilog file "C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Test_CPU.v" into library work
+Analyzing Verilog file "C:/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling module IBUFG
+Compiling module dcm_sp_clock_divide_by_2
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_maximum_period_check(cloc...
+Compiling module dcm_sp_clock_lost
+Compiling module DCM_SP
+Compiling module BUFG
+Compiling module mainClock
+Compiling module memory
+Compiling module TriBuff
+Compiling module Register
+Compiling module Flag_Register
+Compiling module RegFile
+Compiling module Buffer
+Compiling module ALU_Module
+Compiling module signextend
+Compiling module ProgramCounter
+Compiling module nesController
+Compiling module MotorController
+Compiling module Motion
+Compiling module memoryController
+Compiling module Combo
+Compiling module FSM_Control
+Compiling module CPU
+Compiling module Test_CPU
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Compiled 26 Verilog Units
+Built simulation executable C:/Users/u0837708/Desktop/Documents/CPU SimTesting/XMenCPU/Test_CPU_isim_beh.exe
+Fuse Memory Usage: 32964 KB
+Fuse CPU Usage: 748 ms

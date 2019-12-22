@@ -1,0 +1,832 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.12 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v" into library work
+Parsing module <mainClock>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\signextend.v" into library work
+Parsing module <signextend>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\RegFile.v" into library work
+Parsing module <RegFile>.
+Parsing module <Register>.
+Parsing module <Flag_Register>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\memory.v" into library work
+Parsing module <memory>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Buffer.v" into library work
+Parsing module <Buffer>.
+Parsing module <TriBuff>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ALU_Module.v" into library work
+Parsing module <ALU_Module>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" into library work
+Parsing module <FSM_Control>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v" into library work
+Parsing module <Combo>.
+Analyzing Verilog file "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" into library work
+Parsing module <CPU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU>.
+
+Elaborating module <mainClock>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v" Line 126: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v" Line 127: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <Combo>.
+
+Elaborating module <memory>.
+Reading initialization file \"testone.txt\".
+
+Elaborating module <TriBuff>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <Register>.
+
+Elaborating module <Flag_Register>.
+
+Elaborating module <Buffer>.
+
+Elaborating module <ALU_Module>.
+
+Elaborating module <signextend>.
+
+Elaborating module <ProgramCounter>.
+WARNING:HDLCompiler:634 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v" Line 52: Net <mem_dinB[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v" Line 54: Net <mem_addrB[14]> does not have a driver.
+WARNING:HDLCompiler:1127 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" Line 81: Assignment to mem_doutB ignored, since the identifier is never used
+
+Elaborating module <FSM_Control>.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 116: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 117: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 118: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 119: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 120: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 121: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 122: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 123: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 132: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 133: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 134: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 135: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 140: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 145: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 150: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 154: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 253: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 267: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 338: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 418: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 487: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 566: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 635: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 719: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 735: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 819: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 906: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 993: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1071: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1153: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1222: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1303: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1386: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1394: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1401: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1408: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1415: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1422: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1429: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" Line 87: Assignment to mem_doutB_ctrl ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v".
+INFO:Xst:3210 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" line 74: Output port <mem_doutB> of the instance <Guts> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" line 85: Output port <mem_doutB_ctrl> of the instance <Brains> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <CPU> synthesized.
+
+Synthesizing Unit <mainClock>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v".
+    Summary:
+	no macro.
+Unit <mainClock> synthesized.
+
+Synthesizing Unit <Combo>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v".
+WARNING:Xst:647 - Input <mem_addB_ctrl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <mem_dinB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <mem_addrB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Combo> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\memory.v".
+        RAM_WIDTH = 16
+        RAM_ADDR_BITS = 15
+    Found 32768x16-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
+    Found 16-bit register for signal <doutB>.
+    Found 16-bit register for signal <doutA>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <TriBuff>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Buffer.v".
+    Found 1-bit tristate buffer for signal <out<15>> created at line 53
+    Found 1-bit tristate buffer for signal <out<14>> created at line 53
+    Found 1-bit tristate buffer for signal <out<13>> created at line 53
+    Found 1-bit tristate buffer for signal <out<12>> created at line 53
+    Found 1-bit tristate buffer for signal <out<11>> created at line 53
+    Found 1-bit tristate buffer for signal <out<10>> created at line 53
+    Found 1-bit tristate buffer for signal <out<9>> created at line 53
+    Found 1-bit tristate buffer for signal <out<8>> created at line 53
+    Found 1-bit tristate buffer for signal <out<7>> created at line 53
+    Found 1-bit tristate buffer for signal <out<6>> created at line 53
+    Found 1-bit tristate buffer for signal <out<5>> created at line 53
+    Found 1-bit tristate buffer for signal <out<4>> created at line 53
+    Found 1-bit tristate buffer for signal <out<3>> created at line 53
+    Found 1-bit tristate buffer for signal <out<2>> created at line 53
+    Found 1-bit tristate buffer for signal <out<1>> created at line 53
+    Found 1-bit tristate buffer for signal <out<0>> created at line 53
+    Summary:
+	inferred  16 Tristate(s).
+Unit <TriBuff> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\RegFile.v".
+    Summary:
+	no macro.
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <Register>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\RegFile.v".
+    Found 16-bit register for signal <out>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <Register> synthesized.
+
+Synthesizing Unit <Flag_Register>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\RegFile.v".
+    Found 5-bit register for signal <out>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <Flag_Register> synthesized.
+
+Synthesizing Unit <Buffer>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Buffer.v".
+    Summary:
+	no macro.
+Unit <Buffer> synthesized.
+
+Synthesizing Unit <ALU_Module>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ALU_Module.v".
+        ADD = 8'b00000101
+        ADDI = 8'b0101zzzz
+        ADDU = 8'b00000110
+        ADDUI = 8'b0110zzzz
+        ADDC = 8'b00000111
+        ADDCU = 8'b00000100
+        ADDCUI = 8'b0001zzzz
+        ADDCI = 8'b0111zzzz
+        SUB = 8'b00001001
+        SUBI = 8'b1001zzzz
+        CMP = 8'b00001011
+        CMPI = 8'b1011zzzz
+        CMPU = 8'b00001000
+        CMPUI = 8'b0010zzzz
+        AND = 8'b00000001
+        ANDI = 8'b1010zzzz
+        OR = 8'b00000010
+        XOR = 8'b00000011
+        NOT = 8'b00001100
+        LSH = 8'b10000100
+        LSHI = 8'b1000000z
+        ASH = 8'b01001111
+        ASHI = 8'b1000001z
+        WAIT = 8'b00000000
+        MOV = 8'b00001101
+        MOVI = 8'b0011zzzz
+    Found 16-bit subtractor for signal <B[15]_A[15]_sub_29_OUT> created at line 202.
+    Found 16-bit subtractor for signal <A[15]_unary_minus_72_OUT> created at line 341.
+    Found 16-bit adder for signal <n0143> created at line 67.
+    Found 16-bit adder for signal <A[15]_GND_29_o_add_13_OUT> created at line 133.
+    Found 16-bit shifter logical left for signal <B[15]_A[15]_shift_left_70_OUT> created at line 337
+    Found 16-bit shifter logical right for signal <B[15]_A[15]_shift_right_72_OUT> created at line 341
+    Found 16-bit shifter arithmetic right for signal <B[15]_A[15]_shift_right_82_OUT> created at line 376
+    Found 16-bit comparator equal for signal <A[15]_B[15]_equal_3_o> created at line 78
+    Found 1-bit comparator equal for signal <A[15]_B[15]_equal_30_o> created at line 203
+    Found 1-bit comparator equal for signal <A[15]_B[15]_equal_31_o> created at line 203
+    Found 16-bit comparator greater for signal <B[15]_A[15]_LessThan_32_o> created at line 203
+    Found 16-bit comparator greater for signal <A[15]_B[15]_LessThan_41_o> created at line 230
+    Found 32-bit comparator lessequal for signal <n0054> created at line 335
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred  13 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU_Module> synthesized.
+
+Synthesizing Unit <signextend>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\signextend.v".
+        LSHI = 8'b1000000z
+        ASHI = 8'b1000001z
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <signextend> synthesized.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ProgramCounter.v".
+    Found 16-bit register for signal <saved_address>.
+    Found 16-bit register for signal <PC_Out>.
+    Found 16-bit adder for signal <PC> created at line 31.
+    Found 16-bit adder for signal <saved_address[15]_GND_34_o_add_9_OUT> created at line 44.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <ProgramCounter> synthesized.
+
+Synthesizing Unit <FSM_Control>.
+    Related source file is "\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v".
+        Reset = 4'b0000
+        Fetch = 4'b0001
+        Decode = 4'b0010
+        Rtype = 4'b0011
+        Itype = 4'b0100
+        Load_step1 = 4'b0101
+        Load_step2 = 4'b0110
+        Store = 4'b0111
+        JAL_step1 = 4'b1000
+        JAL_step2 = 4'b1001
+        RET = 4'b1010
+        Branch = 4'b1011
+        s11 = 4'b1100
+        s12 = 4'b1101
+        s13 = 4'b1110
+        s14 = 4'b1111
+WARNING:Xst:647 - Input <pc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <flags<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <op>.
+    Found 8-bit register for signal <inst>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x16-bit Read Only RAM for signal <inst[7]_PWR_18_o_wide_mux_98_OUT>
+    Found 16x16-bit Read Only RAM for signal <inst[3]_PWR_18_o_wide_mux_69_OUT>
+    Found 1-bit 8-to-1 multiplexer for signal <_n0233> created at line 1386.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred  42 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <FSM_Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port Read Only RAM                   : 2
+ 32768x16-bit dual-port RAM                            : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 2
+# Registers                                            : 23
+ 16-bit register                                       : 20
+ 5-bit register                                        : 1
+ 8-bit register                                        : 2
+# Comparators                                          : 6
+ 1-bit comparator equal                                : 2
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 8-to-1 multiplexer                              : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 41
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Tristates                                            : 544
+ 1-bit tristate buffer                                 : 544
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:2677 - Node <out_1> of sequential type is unconnected in block <Flags>.
+WARNING:Xst:2677 - Node <out_2> of sequential type is unconnected in block <Flags>.
+
+Synthesizing (advanced) Unit <FSM_Control>.
+INFO:Xst:3231 - The small RAM <Mram_inst[7]_PWR_18_o_wide_mux_98_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<7:4>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_inst[3]_PWR_18_o_wide_mux_69_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<3:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FSM_Control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memory>.
+INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RAM, absorbing the following register(s): <doutA> <doutB>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enA>           | high     |
+    |     weA            | connected to signal <weA>           | high     |
+    |     addrA          | connected to signal <addrA>         |          |
+    |     diA            | connected to signal <dinA>          |          |
+    |     doA            | connected to signal <doutA>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <enB>           | high     |
+    |     weB            | connected to signal <weB>           | high     |
+    |     addrB          | connected to signal <GND>           |          |
+    |     diB            | connected to signal <GND>           |          |
+    |     doB            | connected to signal <doutB>         |          |
+    |     dorstB         | connected to signal <weB>           | high     |
+    | reset value        | 0000000000000000                               |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port distributed Read Only RAM       : 2
+ 32768x16-bit dual-port block RAM                      : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 2
+# Registers                                            : 309
+ Flip-Flops                                            : 309
+# Comparators                                          : 6
+ 1-bit comparator equal                                : 2
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 8-to-1 multiplexer                              : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 40
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Brains/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 1011  | 1011
+ 1010  | 1010
+ 1000  | 1000
+ 0111  | 0111
+ 0101  | 0101
+ 0100  | 0100
+ 0011  | 0011
+ 0110  | 0110
+ 1001  | 1001
+-------------------
+WARNING:Xst:1710 - FF/Latch <inst_LPM_FF1> (without init value) has a constant value of 0 in block <Combo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2042 - Unit TriBuff: 16 internal tristates are replaced by logic (pull-up yes): out<0>, out<10>, out<11>, out<12>, out<13>, out<14>, out<15>, out<1>, out<2>, out<3>, out<4>, out<5>, out<6>, out<7>, out<8>, out<9>.
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <Combo> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <ALU_Module> ...
+WARNING:Xst:2677 - Node <Guts/Reg/Flags/out_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/Reg/Flags/out_2> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/PC/PC_Out_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/PC/saved_address_15> of sequential type is unconnected in block <CPU>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 11.
+FlipFlop Brains/inst_4 has been replicated 1 time(s)
+FlipFlop Brains/inst_5 has been replicated 1 time(s)
+FlipFlop Brains/inst_6 has been replicated 1 time(s)
+FlipFlop Brains/inst_7 has been replicated 1 time(s)
+FlipFlop Brains/state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop Brains/state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop Brains/state_FSM_FFd3 has been replicated 5 time(s)
+FlipFlop Brains/state_FSM_FFd4 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 322
+ Flip-Flops                                            : 322
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1706
+#      GND                         : 1
+#      LUT1                        : 15
+#      LUT2                        : 12
+#      LUT3                        : 39
+#      LUT4                        : 281
+#      LUT5                        : 329
+#      LUT6                        : 576
+#      MUXCY                       : 352
+#      MUXF7                       : 21
+#      VCC                         : 1
+#      XORCY                       : 79
+# FlipFlops/Latches                : 322
+#      FDE                         : 36
+#      FDR                         : 12
+#      FDRE                        : 274
+# RAMS                             : 32
+#      RAMB16BWER                  : 32
+# Clock Buffers                    : 2
+#      BUFG                        : 2
+# IO Buffers                       : 18
+#      IBUF                        : 1
+#      IBUFG                       : 1
+#      OBUF                        : 16
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             322  out of  18224     1%  
+ Number of Slice LUTs:                 1252  out of   9112    13%  
+    Number used as Logic:              1252  out of   9112    13%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1507
+   Number with an unused Flip Flop:    1185  out of   1507    78%  
+   Number with an unused LUT:           255  out of   1507    16%  
+   Number of fully used LUT-FF pairs:    67  out of   1507     4%  
+   Number of unique control sets:        23
+
+IO Utilization: 
+ Number of IOs:                          18
+ Number of bonded IOBs:                  18  out of    232     7%  
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of     32   100%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                2  out of     16    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | DCM_SP:CLKDV           | 354   |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 5.580ns (Maximum Frequency: 179.207MHz)
+   Minimum input arrival time before clock: 5.157ns
+   Maximum output required time after clock: 6.990ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.580ns (frequency: 179.207MHz)
+  Total number of paths / destination ports: 103107868 / 1274
+-------------------------------------------------------------------------
+Delay:               11.160ns (Levels of Logic = 17)
+  Source:            Brains/op_3 (FF)
+  Destination:       Guts/Reg/Reg0/out_0 (FF)
+  Source Clock:      clk rising 0.5X
+  Destination Clock: clk rising 0.5X
+
+  Data Path: Brains/op_3 to Guts/Reg/Reg0/out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.447   1.109  Brains/op_3 (Brains/op_3)
+     LUT6:I0->O            4   0.203   0.684  Brains/out21 (Brains/out2)
+     LUT3:I2->O            6   0.205   0.745  Brains/out22_1 (Brains/out22)
+     LUT6:I5->O           22   0.205   1.134  Brains/Mmux_Read_Reg_BusA191_2 (Brains/Mmux_Read_Reg_BusA1911)
+     LUT6:I5->O            1   0.205   0.000  Guts/ALU_BUS_subA<4>162 (Guts/ALU_BUS_subA<4>162)
+     MUXCY:S->O            1   0.172   0.000  Guts/ALU_BUS_subA<4>_MUXCY_2 (Guts/ALU_BUS_subA<4>3)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_subA<4>_MUXCY_3 (Guts/ALU_BUS_subA<4>4)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_subA<4>_MUXCY_4 (Guts/ALU_BUS_subA<4>5)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_subA<4>_MUXCY_5 (Guts/ALU_BUS_subA<4>6)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_subA<4>_MUXCY_6 (Guts/ALU_BUS_subA<4>7)
+     MUXCY:CI->O           8   0.213   0.803  Guts/ALU_BUS_subA<4>_MUXCY_7 (Guts/ALU_BUS_subA<4>)
+     LUT6:I5->O            1   0.205   0.000  Guts/ALU/Msub_A[15]_unary_minus_72_OUT_lut<4> (Guts/ALU/Msub_A[15]_unary_minus_72_OUT_lut<4>)
+     MUXCY:S->O            1   0.172   0.000  Guts/ALU/Msub_A[15]_unary_minus_72_OUT_cy<4> (Guts/ALU/Msub_A[15]_unary_minus_72_OUT_cy<4>)
+     XORCY:CI->O           1   0.180   0.924  Guts/ALU/Msub_A[15]_unary_minus_72_OUT_xor<5> (Guts/ALU/A[15]_unary_minus_72_OUT<5>)
+     LUT6:I1->O           11   0.203   0.987  Guts/ALU/out11 (Guts/ALU/out1)
+     LUT6:I4->O            9   0.203   0.830  Guts/ALU/out13 (Guts/ALU/_n0191)
+     LUT6:I5->O            6   0.205   0.745  Guts/ALU/C<10>41 (Guts/ALU/C<10>4)
+     LUT6:I5->O           16   0.205   0.000  Guts/Data_Bus<10>LogicTrst9 (Guts/Data_Bus<10>)
+     FDRE:D                    0.102          Guts/Reg/Reg15/out_10
+    ----------------------------------------
+    Total                     11.160ns (3.201ns logic, 7.959ns route)
+                                       (28.7% logic, 71.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 321 / 321
+-------------------------------------------------------------------------
+Offset:              5.157ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Brains/op_7 (FF)
+  Destination Clock: clk rising 0.5X
+
+  Data Path: reset to Brains/op_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           287   1.222   2.317  reset_IBUF (reset_IBUF)
+     LUT5:I1->O           20   0.203   1.092  Brains/_n0288_inv1 (Brains/_n0288_inv)
+     FDE:CE                    0.322          Brains/inst_0
+    ----------------------------------------
+    Total                      5.157ns (1.747ns logic, 3.410ns route)
+                                       (33.9% logic, 66.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 48 / 16
+-------------------------------------------------------------------------
+Offset:              6.990ns (Levels of Logic = 2)
+  Source:            Guts/mem/Mram_the_memory_core14 (RAM)
+  Destination:       mem_doutA<6> (PAD)
+  Source Clock:      clk rising 0.5X
+
+  Data Path: Guts/mem/Mram_the_memory_core14 to mem_doutA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKA->DOA0   10   1.850   0.961  Guts/mem/Mram_the_memory_core14 (Guts/N32)
+     LUT3:I1->O           40   0.203   1.405  Guts/Immediate/Mmux_Extended1131 (mem_doutA_6_OBUF)
+     OBUF:I->O                 2.571          mem_doutA_6_OBUF (mem_doutA<6>)
+    ----------------------------------------
+    Total                      6.990ns (4.624ns logic, 2.366ns route)
+                                       (66.2% logic, 33.8% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   11.160|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 28.00 secs
+Total CPU time to Xst completion: 27.80 secs
+ 
+--> 
+
+Total memory usage is 280316 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   58 (   0 filtered)
+Number of infos    :    6 (   0 filtered)
+
