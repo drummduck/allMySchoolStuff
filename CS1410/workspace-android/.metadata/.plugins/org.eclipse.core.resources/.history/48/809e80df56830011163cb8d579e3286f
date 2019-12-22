@@ -1,0 +1,117 @@
+package cs1410.assign09;
+
+import java.util.Random;
+
+import android.R.color;
+import android.app.Activity;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.SystemClock;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class Assignment09Activity extends Activity implements
+		android.view.View.OnClickListener {
+
+	private Button Small;
+	private Button Medium;
+	private Button Large;
+	private Button ChangeColor;
+	private Button Reset;
+	private TextView Title;
+	private int n = 5;
+	private cs1410.assign09.Assignment09view assignment09view;
+	private Random awesome = new Random();
+	Handler myHandler;
+
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.main);
+
+		myHandler = new Handler();
+		Runnable r = new MyAnimator();
+		myHandler.post(r); // No delay
+
+		Small = (Button) findViewById(R.id.button3);
+		Medium = (Button) findViewById(R.id.button4);
+		Large = (Button) findViewById(R.id.button5);
+		ChangeColor = (Button) findViewById(R.id.button1);
+		Reset = (Button) findViewById(R.id.button2);
+		assignment09view = (cs1410.assign09.Assignment09view) findViewById(R.id.myview);
+		Title = (TextView) findViewById(R.id.textView1);
+		
+		Title.setTextColor(Color.RED);
+
+		Small.setOnClickListener(this);
+		Medium.setOnClickListener(this);
+		Large.setOnClickListener(this);
+		ChangeColor.setOnClickListener(this);
+		Reset.setOnClickListener(this);
+
+	}
+
+	public void setN(int newsize) {
+		this.n = newsize;
+	}
+
+	public void onClick(View v) {
+
+		if (v == Small) {
+			setN(2);
+
+		}
+
+		else if (v == Medium) {
+			setN(5);
+		}
+
+		else if (v == Large) {
+			n = 10;
+		}
+
+		else if (v == ChangeColor) {
+
+			int x = Color.rgb(awesome.nextInt(255),
+					awesome.nextInt(255), awesome.nextInt(255));
+			assignment09view.setColor(x);
+			Title.setTextColor(x);
+
+		}
+
+		else if (v == Reset) {
+			assignment09view.erase();
+			assignment09view.setColor(Color.RED);
+			Title.setTextColor(Color.RED);
+		}
+
+		else {
+			n = 5;
+			
+		}
+	}
+
+	private class MyAnimator implements Runnable {
+
+		public void run() {
+			// For debugging ONLY - use
+
+			Assignment09view lv = (Assignment09view) findViewById(R.id.myview);
+			lv.setCircleSize(n);
+
+			myHandler.postDelayed(this, 1);
+			
+			
+			
+			
+
+		}
+	}
+
+}
