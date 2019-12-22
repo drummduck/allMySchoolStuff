@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v" Line 126: Assignment to <arg fmt="%s" index="1">locked_int</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\ipcore_dir\mainClock.v" Line 127: Assignment to <arg fmt="%s" index="1">status_int</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v" Line 52: Net &lt;<arg fmt="%s" index="1">mem_dinB[15]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\Combo.v" Line 54: Net &lt;<arg fmt="%s" index="1">mem_addrB[14]</arg>&gt; does not have a driver.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" Line 81: Assignment to <arg fmt="%s" index="1">mem_doutB</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 116: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 117: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 118: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 119: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 120: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 121: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 122: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 123: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 132: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 133: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 134: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 135: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 140: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 145: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 150: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 154: Signal &lt;<arg fmt="%s" index="1">instruction</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 253: Signal &lt;<arg fmt="%s" index="1">op</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 267: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 338: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 418: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 487: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 566: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 635: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 719: Signal &lt;<arg fmt="%s" index="1">op</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 735: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 819: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 906: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 993: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1071: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1153: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1222: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1303: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1386: Signal &lt;<arg fmt="%s" index="1">inst</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1394: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1401: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1408: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1415: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1422: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\FSM_Control.v" Line 1429: Signal &lt;<arg fmt="%s" index="1">flags</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v" Line 87: Assignment to <arg fmt="%s" index="1">mem_doutB_ctrl</arg> ignored, since the identifier is never used
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v</arg>&quot; line <arg fmt="%s" index="2">74</arg>: Output port &lt;<arg fmt="%s" index="3">mem_doutB</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Guts</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">\\wannsee\users\u0687930\My Documents\ECE 3710\Clock change with help\XMenCPU\CPU.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">mem_doutB_ctrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Brains</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">mem_addB_ctrl</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_dinB</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">mem_addrB</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">pc</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">flags&lt;2:0&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+</msg>
+
+<msg type="info" file="Xst" num="1767" delta="new" >HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Flags</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">Flags</arg>&gt;.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_inst[7]_PWR_18_o_wide_mux_98_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram_inst[3]_PWR_18_o_wide_mux_69_OUT</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_the_memory_core</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+
+<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">inst_LPM_FF1</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">Combo</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+</msg>
+
+<msg type="warning" file="Xst" num="2042" delta="new" >Unit <arg fmt="%s" index="1">TriBuff</arg>: <arg fmt="%d" index="2">16</arg> internal tristates are replaced by logic (pull-up <arg fmt="%s" index="3">yes</arg>): </msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Guts/Reg/Flags/out_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Guts/Reg/Flags/out_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Guts/PC/PC_Out_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">Guts/PC/saved_address_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">CPU</arg>&gt;.
+</msg>
+
+</messages>
+

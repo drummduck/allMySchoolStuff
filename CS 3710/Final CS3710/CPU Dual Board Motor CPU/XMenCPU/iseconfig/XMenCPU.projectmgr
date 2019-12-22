@@ -1,0 +1,180 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!--This is an ISE project configuration file.-->
+<!--It holds project specific layout data for the projectmgr plugin.-->
+<!--Copyright (c) 1995-2009 Xilinx, Inc.  All rights reserved.-->
+<Project version="2" owner="projectmgr" name="XMenCPU" >
+   <!--This is an ISE project configuration file.-->
+   <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/Buffer C:|Users|u0837708|CS3710|XMenCPU|Buffer.v</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Beef Jerky|Documents|Beef Jerky Documents|ECE 3710|XMenCPU|CPU.v/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Beef Jerky|Documents|Beef Jerky Documents|ECE 3710|XMenCPU|CPU.v/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Beef Jerky|Documents|Beef Jerky Documents|ECE 3710|XMenCPU|CPU.v/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|CPU.v/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|CPU.v/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|CPU.v/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|XMenCPU|CPU.v/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|XMenCPU|CPU.v/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|XMenCPU|CPU.v/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|XMenCPU|CPU.v/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|Katie|Documents|CS 3710|XMenCPU|CPU.v/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|CS3710|XMenCPU|CPU.v/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|CS3710|XMenCPU|CPU.v/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|CS3710|XMenCPU|CPU.v/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|Dual Board|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|Dual Board|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/CPU C:|Users|u0837708|Desktop|Documents|Dual Board|CPU SimTesting|XMenCPU|CPU.v/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/CPU U:|My Documents|ECE 3710|Clock change with help|XMenCPU|CPU.v</ClosedNode>
+         <ClosedNode>/CPU U:|My Documents|ECE 3710|Clock change with help|XMenCPU|CPU.v/Guts - Combo</ClosedNode>
+         <ClosedNode>/Combo C:|Users|Katie|Documents|CS 3710|XMenCPU|Combo.v/BusA - Buffer</ClosedNode>
+         <ClosedNode>/Combo C:|Users|Katie|Documents|CS 3710|XMenCPU|Combo.v/BusB - Buffer</ClosedNode>
+         <ClosedNode>/Combo C:|Users|Katie|Documents|CS 3710|XMenCPU|Combo.v/Reg - RegFile</ClosedNode>
+         <ClosedNode>/RegFile C:|Users|u0837708|CS3710|XMenCPU|RegFile.v</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000d7000000020000000000000000000000000200000064ffffffff000000810000000300000002000000d70000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Utilities</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f8000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f80000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Utilities</CurrentItem>
+   </ItemView>
+   <ItemView guiview="File" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000000000000001000000000000000000000000000000000000027d000000040101000100000000000000000000000064ffffffff000000810000000000000004000000420000000100000000000000240000000100000000000000660000000100000000000001b10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>ALU_Module.v</CurrentItem>
+   </ItemView>
+   <ItemView guiview="Library" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>work</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000000010000000000000000000000000000000000000109000000010001000100000000000000000000000064ffffffff000000810000000000000001000001090000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>work</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Configure Target Device</ClosedNode>
+         <ClosedNode>Design Utilities</ClosedNode>
+         <ClosedNode>Implement Design</ClosedNode>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Configure Target Device</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Configure Target Device</CurrentItem>
+   </ItemView>
+   <SourceProcessView>000000ff00000000000000020000011b0000011b01000000050100000002</SourceProcessView>
+   <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/CPU C:|Users|Beef Jerky|Documents|Beef Jerky Documents|ECE 3710|XMenCPU|CPU.v</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|Beef Jerky|Documents|Beef Jerky Documents|ECE 3710|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|Katie|Documents|CS 3710|GOOD CLOCK CPU|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/BusA - Buffer</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/BusB - Buffer</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/Reg - RegFile</ClosedNode>
+         <ClosedNode>/Test_CPU C:|Users|u0837708|Desktop|Documents|CPU SimTesting|XMenCPU|Test_CPU.v/uut - CPU/Guts - Combo/motorOps - Motion</ClosedNode>
+         <ClosedNode>PROJECT</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000000d7000000020000000000000000000000000200000064ffffffff000000810000000300000002000000d70000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
+      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Design Utilities</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000136000000010000000100000000000000000000000064ffffffff000000810000000000000001000001360000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Design Utilities</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_VERILOG" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000100000000000000000000000000000000000000000000000135000000010000000100000000000000000000000064ffffffff000000810000000000000001000001350000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>View HDL Instantiation Template</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000000f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000000f10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>View HDL Instantiation Template</CurrentItem>
+   </ItemView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_UCF" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>User Constraints</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem/>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff0000000000000001000000010000000000000000000000000000000000000000000000018d000000010000000100000000000000000000000064ffffffff0000008100000000000000010000018d0000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem/>
+   </ItemView>
+</Project>

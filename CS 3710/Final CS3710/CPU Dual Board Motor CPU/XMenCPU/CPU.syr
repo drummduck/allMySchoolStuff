@@ -1,0 +1,1345 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: CPU.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "CPU.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "CPU"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : CPU
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+---- Other Options
+Cores Search Directories           : {"ipcore_dir"  }
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ipcore_dir\mainClock.v" into library work
+Parsing module <mainClock>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\nesController.v" into library work
+Parsing module <nesController>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\MotorController.v" into library work
+Parsing module <MotorController>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\signextend.v" into library work
+Parsing module <signextend>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\RegFile.v" into library work
+Parsing module <RegFile>.
+Parsing module <Register>.
+Parsing module <Flag_Register>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ProgramCounter.v" into library work
+Parsing module <ProgramCounter>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Motion.v" into library work
+Parsing module <Motion>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\memoryController.v" into library work
+Parsing module <memoryController>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\memory.v" into library work
+Parsing module <memory>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Buffer.v" into library work
+Parsing module <Buffer>.
+Parsing module <TriBuff>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ALU_Module.v" into library work
+Parsing module <ALU_Module>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" into library work
+Parsing module <FSM_Control>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Combo.v" into library work
+Parsing module <Combo>.
+Analyzing Verilog file "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v" into library work
+Parsing module <CPU>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <CPU>.
+
+Elaborating module <mainClock>.
+
+Elaborating module <IBUFG>.
+
+Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=1,CLKFX_MULTIPLY=4,CLKIN_DIVIDE_BY_2="FALSE",CLKIN_PERIOD=10.0,CLKOUT_PHASE_SHIFT="NONE",CLK_FEEDBACK="1X",DESKEW_ADJUST="SYSTEM_SYNCHRONOUS",PHASE_SHIFT=0,STARTUP_WAIT="FALSE")>.
+WARNING:HDLCompiler:1127 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ipcore_dir\mainClock.v" Line 126: Assignment to locked_int ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ipcore_dir\mainClock.v" Line 127: Assignment to status_int ignored, since the identifier is never used
+
+Elaborating module <BUFG>.
+
+Elaborating module <Combo>.
+
+Elaborating module <memory>.
+Reading initialization file \"hexprogram.txt\".
+
+Elaborating module <TriBuff>.
+
+Elaborating module <RegFile>.
+
+Elaborating module <Register>.
+
+Elaborating module <Flag_Register>.
+
+Elaborating module <Buffer>.
+
+Elaborating module <ALU_Module>.
+
+Elaborating module <signextend>.
+
+Elaborating module <ProgramCounter>.
+
+Elaborating module <Motion>.
+
+Elaborating module <nesController>.
+
+Elaborating module <MotorController>.
+
+Elaborating module <memoryController>.
+WARNING:HDLCompiler:634 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Combo.v" Line 77: Net <mem_dinB[15]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Combo.v" Line 80: Net <mem_addrB[14]> does not have a driver.
+WARNING:HDLCompiler:1127 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v" Line 101: Assignment to mem_doutB ignored, since the identifier is never used
+
+Elaborating module <FSM_Control>.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 116: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 117: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 118: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 119: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 120: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 121: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 122: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 123: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 132: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 133: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 134: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 135: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 140: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 145: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 150: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 154: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 234: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 246: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 267: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 298: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 317: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 346: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 365: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 399: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 415: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 449: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 479: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 514: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 542: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 572: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 592: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 620: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 659: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 664: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 671: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 678: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 685: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 692: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v" Line 699: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:1127 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v" Line 116: Assignment to mem_doutB_ctrl ignored, since the identifier is never used
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <CPU>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v".
+INFO:Xst:3210 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v" line 94: Output port <mem_doutB> of the instance <Guts> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.v" line 114: Output port <mem_doutB_ctrl> of the instance <Brains> is unconnected or connected to loadless signal.
+    Summary:
+	no macro.
+Unit <CPU> synthesized.
+
+Synthesizing Unit <mainClock>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ipcore_dir\mainClock.v".
+    Summary:
+	no macro.
+Unit <mainClock> synthesized.
+
+Synthesizing Unit <Combo>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Combo.v".
+WARNING:Xst:647 - Input <mem_addB_ctrl> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:653 - Signal <mem_dinB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <mem_addrB> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+    Summary:
+	inferred   2 Multiplexer(s).
+Unit <Combo> synthesized.
+
+Synthesizing Unit <memory>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\memory.v".
+        RAM_WIDTH = 16
+        RAM_ADDR_BITS = 15
+    Found 32768x16-bit dual-port RAM <Mram_the_memory_core> for signal <the_memory_core>.
+    Found 16-bit register for signal <doutB>.
+    Found 16-bit register for signal <doutA>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
+Unit <memory> synthesized.
+
+Synthesizing Unit <TriBuff>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Buffer.v".
+    Found 1-bit tristate buffer for signal <out<15>> created at line 53
+    Found 1-bit tristate buffer for signal <out<14>> created at line 53
+    Found 1-bit tristate buffer for signal <out<13>> created at line 53
+    Found 1-bit tristate buffer for signal <out<12>> created at line 53
+    Found 1-bit tristate buffer for signal <out<11>> created at line 53
+    Found 1-bit tristate buffer for signal <out<10>> created at line 53
+    Found 1-bit tristate buffer for signal <out<9>> created at line 53
+    Found 1-bit tristate buffer for signal <out<8>> created at line 53
+    Found 1-bit tristate buffer for signal <out<7>> created at line 53
+    Found 1-bit tristate buffer for signal <out<6>> created at line 53
+    Found 1-bit tristate buffer for signal <out<5>> created at line 53
+    Found 1-bit tristate buffer for signal <out<4>> created at line 53
+    Found 1-bit tristate buffer for signal <out<3>> created at line 53
+    Found 1-bit tristate buffer for signal <out<2>> created at line 53
+    Found 1-bit tristate buffer for signal <out<1>> created at line 53
+    Found 1-bit tristate buffer for signal <out<0>> created at line 53
+    Summary:
+	inferred  16 Tristate(s).
+Unit <TriBuff> synthesized.
+
+Synthesizing Unit <RegFile>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\RegFile.v".
+    Summary:
+	no macro.
+Unit <RegFile> synthesized.
+
+Synthesizing Unit <Register>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\RegFile.v".
+    Found 16-bit register for signal <out>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <Register> synthesized.
+
+Synthesizing Unit <Flag_Register>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\RegFile.v".
+    Found 5-bit register for signal <out>.
+    Summary:
+	inferred   5 D-type flip-flop(s).
+Unit <Flag_Register> synthesized.
+
+Synthesizing Unit <Buffer>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Buffer.v".
+    Summary:
+	no macro.
+Unit <Buffer> synthesized.
+
+Synthesizing Unit <ALU_Module>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ALU_Module.v".
+        ADD = 8'b00000101
+        ADDI = 8'b0101zzzz
+        ADDU = 8'b00000110
+        ADDUI = 8'b0110zzzz
+        ADDC = 8'b00000111
+        ADDCU = 8'b00000100
+        ADDCUI = 8'b0001zzzz
+        ADDCI = 8'b0111zzzz
+        SUB = 8'b00001001
+        SUBI = 8'b1001zzzz
+        CMP = 8'b00001011
+        CMPI = 8'b1011zzzz
+        CMPU = 8'b00001000
+        CMPUI = 8'b0010zzzz
+        AND = 8'b00000001
+        ANDI = 8'b1010zzzz
+        OR = 8'b00000010
+        XOR = 8'b00000011
+        NOT = 8'b00001100
+        LSH = 8'b10000100
+        LSHI = 8'b1000000z
+        ASH = 8'b01001111
+        ASHI = 8'b1000001z
+        WAIT = 8'b00000000
+        MOV = 8'b00001101
+        MOVI = 8'b0011zzzz
+    Found 16-bit subtractor for signal <B[15]_A[15]_sub_29_OUT> created at line 202.
+    Found 16-bit subtractor for signal <A[15]_unary_minus_72_OUT> created at line 341.
+    Found 16-bit adder for signal <n0143> created at line 67.
+    Found 16-bit adder for signal <A[15]_GND_29_o_add_13_OUT> created at line 133.
+    Found 16-bit shifter logical left for signal <B[15]_A[15]_shift_left_70_OUT> created at line 337
+    Found 16-bit shifter logical right for signal <B[15]_A[15]_shift_right_72_OUT> created at line 341
+    Found 16-bit shifter arithmetic right for signal <B[15]_A[15]_shift_right_82_OUT> created at line 376
+    Found 16-bit comparator equal for signal <A[15]_B[15]_equal_3_o> created at line 78
+    Found 1-bit comparator equal for signal <A[15]_B[15]_equal_30_o> created at line 203
+    Found 1-bit comparator equal for signal <A[15]_B[15]_equal_31_o> created at line 203
+    Found 16-bit comparator greater for signal <B[15]_A[15]_LessThan_32_o> created at line 203
+    Found 16-bit comparator greater for signal <A[15]_B[15]_LessThan_41_o> created at line 230
+    Found 32-bit comparator lessequal for signal <n0054> created at line 335
+    Summary:
+	inferred   4 Adder/Subtractor(s).
+	inferred   6 Comparator(s).
+	inferred  13 Multiplexer(s).
+	inferred   3 Combinational logic shifter(s).
+Unit <ALU_Module> synthesized.
+
+Synthesizing Unit <signextend>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\signextend.v".
+        LSHI = 8'b1000000z
+        ASHI = 8'b1000001z
+    Summary:
+	inferred   1 Multiplexer(s).
+Unit <signextend> synthesized.
+
+Synthesizing Unit <ProgramCounter>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\ProgramCounter.v".
+    Found 16-bit register for signal <saved_address>.
+    Found 16-bit register for signal <PC_Out>.
+    Found 16-bit adder for signal <PC> created at line 31.
+    Found 16-bit adder for signal <saved_address[15]_GND_34_o_add_9_OUT> created at line 44.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+	inferred  32 D-type flip-flop(s).
+	inferred   5 Multiplexer(s).
+Unit <ProgramCounter> synthesized.
+
+Synthesizing Unit <Motion>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\Motion.v".
+    Found 16-bit register for signal <yAxisUpperSetpoint>.
+    Found 16-bit register for signal <zAxisUpperSetpoint>.
+    Found 16-bit register for signal <xAxisUpperSetpoint>.
+    Summary:
+	inferred  48 D-type flip-flop(s).
+Unit <Motion> synthesized.
+
+Synthesizing Unit <nesController>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\nesController.v".
+        Loop = 12
+    Found 1-bit register for signal <clkOut>.
+    Found 10-bit register for signal <count>.
+    Found 8-bit register for signal <nesControl>.
+    Found 1-bit register for signal <latch>.
+    Found 11-bit register for signal <counter>.
+    Found 1-bit register for signal <nesEnable>.
+    Found 8-bit register for signal <nesControlOut>.
+    Found 10-bit adder for signal <count[9]_GND_36_o_add_10_OUT> created at line 62.
+    Found 11-bit adder for signal <counter[10]_GND_36_o_add_17_OUT> created at line 82.
+    Found 11-bit comparator greater for signal <n0015> created at line 76
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   1 Comparator(s).
+Unit <nesController> synthesized.
+
+Synthesizing Unit <MotorController>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\MotorController.v".
+WARNING:Xst:647 - Input <directionAEnable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <directionBEnable> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 16-bit register for signal <axisUpperLimit>.
+    Found 14-bit register for signal <counter>.
+    Found 19-bit register for signal <axisCounter>.
+    Found 1-bit register for signal <step>.
+    Found 1-bit register for signal <dir>.
+    Found 1-bit register for signal <enable>.
+    Found 1-bit register for signal <stepOut>.
+    Found 16-bit register for signal <axisPointer>.
+    Found 19-bit subtractor for signal <axisCounter[18]_GND_37_o_sub_16_OUT> created at line 83.
+    Found 19-bit adder for signal <axisCounter[18]_GND_37_o_add_12_OUT> created at line 76.
+    Found 14-bit adder for signal <counter[13]_GND_37_o_add_19_OUT> created at line 93.
+    Found 16-bit comparator lessequal for signal <n0009> created at line 74
+    Found 16-bit comparator lessequal for signal <n0014> created at line 81
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  69 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <MotorController> synthesized.
+
+Synthesizing Unit <memoryController>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\memoryController.v".
+WARNING:Xst:647 - Input <dinA> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1-bit register for signal <movementEnable<6>>.
+    Found 1-bit register for signal <movementEnable<5>>.
+    Found 1-bit register for signal <movementEnable<4>>.
+    Found 1-bit register for signal <movementEnable<3>>.
+    Found 1-bit register for signal <movementEnable<2>>.
+    Found 1-bit register for signal <movementEnable<1>>.
+    Found 1-bit register for signal <movementEnable<0>>.
+    Found 1-bit register for signal <startSignal>.
+    Found 1-bit register for signal <timesUp>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <memoryController> synthesized.
+
+Synthesizing Unit <FSM_Control>.
+    Related source file is "C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\FSM_Control.v".
+        Reset = 4'b0000
+        Fetch = 4'b0001
+        Decode = 4'b0010
+        Rtype = 4'b0011
+        Itype = 4'b0100
+        Load_step1 = 4'b0101
+        Load_step2 = 4'b0110
+        Store = 4'b0111
+        JAL_step1 = 4'b1000
+        JAL_step2 = 4'b1001
+        RET = 4'b1010
+        Branch = 4'b1011
+        s11 = 4'b1100
+        s12 = 4'b1101
+        s13 = 4'b1110
+        s14 = 4'b1111
+WARNING:Xst:647 - Input <pc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <flags<2:0>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <op>.
+    Found 8-bit register for signal <inst>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x16-bit Read Only RAM for signal <inst[7]_PWR_23_o_wide_mux_98_OUT>
+    Found 16x16-bit Read Only RAM for signal <inst[3]_PWR_23_o_wide_mux_69_OUT>
+    Found 1-bit 8-to-1 multiplexer for signal <_n0233> created at line 659.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred  42 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <FSM_Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port Read Only RAM                   : 2
+ 32768x16-bit dual-port RAM                            : 1
+# Adders/Subtractors                                   : 13
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 14-bit adder                                          : 3
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 2
+ 19-bit addsub                                         : 3
+# Registers                                            : 66
+ 1-bit register                                        : 24
+ 10-bit register                                       : 1
+ 11-bit register                                       : 1
+ 14-bit register                                       : 3
+ 16-bit register                                       : 29
+ 19-bit register                                       : 3
+ 5-bit register                                        : 1
+ 8-bit register                                        : 4
+# Comparators                                          : 13
+ 1-bit comparator equal                                : 2
+ 11-bit comparator greater                             : 1
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 64
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 8-to-1 multiplexer                              : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 41
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# Tristates                                            : 544
+ 1-bit tristate buffer                                 : 544
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_0> in Unit <motorOps> is equivalent to the following 7 FFs/Latches, which will be removed : <xAxisUpperSetpoint_1> <xAxisUpperSetpoint_2> <xAxisUpperSetpoint_4> <xAxisUpperSetpoint_6> <xAxisUpperSetpoint_7> <xAxisUpperSetpoint_8> <yAxisUpperSetpoint_9> 
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_10> in Unit <motorOps> is equivalent to the following 24 FFs/Latches, which will be removed : <xAxisUpperSetpoint_12> <xAxisUpperSetpoint_13> <xAxisUpperSetpoint_14> <xAxisUpperSetpoint_15> <yAxisUpperSetpoint_0> <yAxisUpperSetpoint_1> <yAxisUpperSetpoint_8> <yAxisUpperSetpoint_10> <yAxisUpperSetpoint_12> <yAxisUpperSetpoint_13> <yAxisUpperSetpoint_14> <yAxisUpperSetpoint_15> <zAxisUpperSetpoint_0> <zAxisUpperSetpoint_1> <zAxisUpperSetpoint_2> <zAxisUpperSetpoint_4> <zAxisUpperSetpoint_6> <zAxisUpperSetpoint_7> <zAxisUpperSetpoint_8> <zAxisUpperSetpoint_10> <zAxisUpperSetpoint_12> <zAxisUpperSetpoint_13> <zAxisUpperSetpoint_14> <zAxisUpperSetpoint_15> 
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_3> in Unit <motorOps> is equivalent to the following 5 FFs/Latches, which will be removed : <xAxisUpperSetpoint_5> <xAxisUpperSetpoint_11> <yAxisUpperSetpoint_11> <zAxisUpperSetpoint_9> <zAxisUpperSetpoint_11> 
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_9> in Unit <motorOps> is equivalent to the following 8 FFs/Latches, which will be removed : <yAxisUpperSetpoint_2> <yAxisUpperSetpoint_3> <yAxisUpperSetpoint_4> <yAxisUpperSetpoint_5> <yAxisUpperSetpoint_6> <yAxisUpperSetpoint_7> <zAxisUpperSetpoint_3> <zAxisUpperSetpoint_5> 
+INFO:Xst:2261 - The FF/Latch <movementEnable_6> in Unit <IO> is equivalent to the following FF/Latch, which will be removed : <startSignal> 
+WARNING:Xst:1710 - FF/Latch <movementEnable_0> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_1> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_2> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_4> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_5> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_3> (without init value) has a constant value of 0 in block <IO>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <xAxisUpperSetpoint_10> (without init value) has a constant value of 0 in block <motorOps>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <xAxisUpperSetpoint_3> (without init value) has a constant value of 1 in block <motorOps>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_15> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_14> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_13> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_12> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_10> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_8> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_7> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_6> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_10> (without init value) has a constant value of 0 in block <xAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_12> (without init value) has a constant value of 0 in block <xAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_13> (without init value) has a constant value of 0 in block <xAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_14> (without init value) has a constant value of 0 in block <xAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_15> (without init value) has a constant value of 0 in block <xAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_0> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_1> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_8> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_10> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_12> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_13> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_14> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_15> (without init value) has a constant value of 0 in block <yAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_0> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_1> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_2> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <axisUpperLimit_4> (without init value) has a constant value of 0 in block <zAxis>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <out_1> of sequential type is unconnected in block <Flags>.
+WARNING:Xst:2677 - Node <out_2> of sequential type is unconnected in block <Flags>.
+WARNING:Xst:2677 - Node <nesControlOut_5> of sequential type is unconnected in block <Mario>.
+
+Synthesizing (advanced) Unit <FSM_Control>.
+INFO:Xst:3231 - The small RAM <Mram_inst[7]_PWR_23_o_wide_mux_98_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<7:4>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_inst[3]_PWR_23_o_wide_mux_69_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<3:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FSM_Control> synthesized (advanced).
+
+Synthesizing (advanced) Unit <MotorController>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+The following registers are absorbed into counter <axisCounter>: 1 register on signal <axisCounter>.
+Unit <MotorController> synthesized (advanced).
+
+Synthesizing (advanced) Unit <memory>.
+INFO:Xst:3226 - The RAM <Mram_the_memory_core> will be implemented as a BLOCK RAM, absorbing the following register(s): <doutA> <doutB>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     enA            | connected to signal <enA>           | high     |
+    |     weA            | connected to signal <weA>           | high     |
+    |     addrA          | connected to signal <addrA>         |          |
+    |     diA            | connected to signal <dinA>          |          |
+    |     doA            | connected to signal <doutA>         |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32768-word x 16-bit                 |          |
+    |     mode           | read-first                          |          |
+    |     clkB           | connected to signal <clk>           | rise     |
+    |     enB            | connected to signal <enB>           | high     |
+    |     weB            | connected to signal <weB>           | high     |
+    |     addrB          | connected to signal <GND>           |          |
+    |     diB            | connected to signal <GND>           |          |
+    |     doB            | connected to signal <doutB>         |          |
+    |     dorstB         | connected to signal <weB>           | high     |
+    | reset value        | 0000000000000000                               |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <memory> synthesized (advanced).
+
+Synthesizing (advanced) Unit <nesController>.
+The following registers are absorbed into counter <count>: 1 register on signal <count>.
+The following registers are absorbed into counter <counter>: 1 register on signal <counter>.
+Unit <nesController> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 3
+ 16x16-bit single-port distributed Read Only RAM       : 2
+ 32768x16-bit dual-port block RAM                      : 1
+# Adders/Subtractors                                   : 5
+ 16-bit adder                                          : 3
+ 16-bit subtractor                                     : 2
+# Counters                                             : 8
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 14-bit up counter                                     : 3
+ 19-bit updown counter                                 : 3
+# Registers                                            : 493
+ Flip-Flops                                            : 493
+# Comparators                                          : 13
+ 1-bit comparator equal                                : 2
+ 11-bit comparator greater                             : 1
+ 16-bit comparator equal                               : 1
+ 16-bit comparator greater                             : 2
+ 16-bit comparator lessequal                           : 6
+ 32-bit comparator lessequal                           : 1
+# Multiplexers                                         : 63
+ 1-bit 2-to-1 multiplexer                              : 21
+ 1-bit 8-to-1 multiplexer                              : 1
+ 15-bit 2-to-1 multiplexer                             : 1
+ 16-bit 2-to-1 multiplexer                             : 40
+# Logic shifters                                       : 3
+ 16-bit shifter arithmetic right                       : 1
+ 16-bit shifter logical left                           : 1
+ 16-bit shifter logical right                          : 1
+# FSMs                                                 : 1
+# Xors                                                 : 1
+ 16-bit xor2                                           : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:1710 - FF/Latch <zAxisUpperSetpoint_15> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_14> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_13> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_12> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_11> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_10> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_9> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_8> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_7> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_6> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_4> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_2> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_1> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <zAxisUpperSetpoint_0> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_15> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_14> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_13> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_12> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_11> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_10> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_8> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_1> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <yAxisUpperSetpoint_0> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_15> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_14> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_13> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_12> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_11> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_10> (without init value) has a constant value of 0 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_5> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <xAxisUpperSetpoint_3> (without init value) has a constant value of 1 in block <Motion>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <movementEnable_3> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <movementEnable_5> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <movementEnable_4> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <movementEnable_2> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <movementEnable_1> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <movementEnable_0> (without init value) has a constant value of 0 in block <memoryController>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_0> in Unit <Motion> is equivalent to the following 7 FFs/Latches, which will be removed : <xAxisUpperSetpoint_1> <xAxisUpperSetpoint_2> <xAxisUpperSetpoint_4> <xAxisUpperSetpoint_6> <xAxisUpperSetpoint_7> <xAxisUpperSetpoint_8> <yAxisUpperSetpoint_9> 
+INFO:Xst:2261 - The FF/Latch <xAxisUpperSetpoint_9> in Unit <Motion> is equivalent to the following 8 FFs/Latches, which will be removed : <yAxisUpperSetpoint_2> <yAxisUpperSetpoint_3> <yAxisUpperSetpoint_4> <yAxisUpperSetpoint_5> <yAxisUpperSetpoint_6> <yAxisUpperSetpoint_7> <zAxisUpperSetpoint_3> <zAxisUpperSetpoint_5> 
+INFO:Xst:2261 - The FF/Latch <movementEnable_6> in Unit <memoryController> is equivalent to the following FF/Latch, which will be removed : <startSignal> 
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <Brains/FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 1011  | 1011
+ 1010  | 1010
+ 1000  | 1000
+ 0111  | 0111
+ 0101  | 0101
+ 0100  | 0100
+ 0011  | 0011
+ 0110  | 0110
+ 1001  | 1001
+-------------------
+WARNING:Xst:1710 - FF/Latch <inst_LPM_FF1> (without init value) has a constant value of 0 in block <Combo>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2042 - Unit TriBuff: 16 internal tristates are replaced by logic (pull-up yes): out<0>, out<10>, out<11>, out<12>, out<13>, out<14>, out<15>, out<1>, out<2>, out<3>, out<4>, out<5>, out<6>, out<7>, out<8>, out<9>.
+
+Optimizing unit <RegFile> ...
+
+Optimizing unit <CPU> ...
+
+Optimizing unit <Combo> ...
+
+Optimizing unit <ProgramCounter> ...
+
+Optimizing unit <nesController> ...
+
+Optimizing unit <MotorController> ...
+
+Optimizing unit <memoryController> ...
+
+Optimizing unit <ALU_Module> ...
+WARNING:Xst:1710 - FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_0> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_1> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_2> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_4> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_6> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_7> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_8> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_10> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisUpperLimit_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_0> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_1> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_8> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_10> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisUpperLimit_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_10> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <Guts/Reg/Flags/out_1> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/Reg/Flags/out_2> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/PC/PC_Out_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/PC/saved_address_15> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:2677 - Node <Guts/motorOps/Mario/nesControlOut_5> of sequential type is unconnected in block <CPU>.
+WARNING:Xst:1710 - FF/Latch <Guts/motorOps/xAxis/axisCounter_18> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisCounter_17> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisCounter_16> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisCounter_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisCounter_18> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisCounter_17> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisCounter_16> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisCounter_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisCounter_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisCounter_16> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisCounter_17> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisCounter_18> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisPointer_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisPointer_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisPointer_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/zAxis/axisPointer_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisPointer_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisPointer_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisPointer_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/yAxis/axisPointer_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisPointer_12> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisPointer_13> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisPointer_14> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Guts/motorOps/xAxis/axisPointer_15> (without init value) has a constant value of 0 in block <CPU>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/step> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/step> <Guts/motorOps/zAxis/step> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_11> in Unit <CPU> is equivalent to the following 5 FFs/Latches, which will be removed : <Guts/motorOps/xAxis/axisUpperLimit_5> <Guts/motorOps/xAxis/axisUpperLimit_3> <Guts/motorOps/yAxis/axisUpperLimit_11> <Guts/motorOps/zAxis/axisUpperLimit_11> <Guts/motorOps/zAxis/axisUpperLimit_9> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_8> in Unit <CPU> is equivalent to the following 7 FFs/Latches, which will be removed : <Guts/motorOps/xAxis/axisUpperLimit_7> <Guts/motorOps/xAxis/axisUpperLimit_6> <Guts/motorOps/xAxis/axisUpperLimit_4> <Guts/motorOps/xAxis/axisUpperLimit_2> <Guts/motorOps/xAxis/axisUpperLimit_1> <Guts/motorOps/xAxis/axisUpperLimit_0> <Guts/motorOps/yAxis/axisUpperLimit_9> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/axisUpperLimit_9> in Unit <CPU> is equivalent to the following 8 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/axisUpperLimit_7> <Guts/motorOps/yAxis/axisUpperLimit_6> <Guts/motorOps/yAxis/axisUpperLimit_5> <Guts/motorOps/yAxis/axisUpperLimit_4> <Guts/motorOps/yAxis/axisUpperLimit_3> <Guts/motorOps/yAxis/axisUpperLimit_2> <Guts/motorOps/zAxis/axisUpperLimit_5> <Guts/motorOps/zAxis/axisUpperLimit_3> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_0> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_0> <Guts/motorOps/zAxis/counter_0> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_1> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_1> <Guts/motorOps/zAxis/counter_1> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_2> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_2> <Guts/motorOps/zAxis/counter_2> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_3> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_3> <Guts/motorOps/zAxis/counter_3> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_4> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_4> <Guts/motorOps/zAxis/counter_4> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_5> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_5> <Guts/motorOps/zAxis/counter_5> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_6> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_6> <Guts/motorOps/zAxis/counter_6> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_7> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_7> <Guts/motorOps/zAxis/counter_7> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_8> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_8> <Guts/motorOps/zAxis/counter_8> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_9> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_9> <Guts/motorOps/zAxis/counter_9> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_10> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_10> <Guts/motorOps/zAxis/counter_10> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_11> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_11> <Guts/motorOps/zAxis/counter_11> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_12> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_12> <Guts/motorOps/zAxis/counter_12> 
+INFO:Xst:2261 - The FF/Latch <Guts/motorOps/xAxis/counter_13> in Unit <CPU> is equivalent to the following 2 FFs/Latches, which will be removed : <Guts/motorOps/yAxis/counter_13> <Guts/motorOps/zAxis/counter_13> 
+INFO:Xst:3203 - The FF/Latch <Guts/motorOps/xAxisUpperSetpoint_0> in Unit <CPU> is the opposite to the following FF/Latch, which will be removed : <Guts/motorOps/xAxisUpperSetpoint_9> 
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block CPU, actual ratio is 14.
+FlipFlop Brains/inst_3 has been replicated 2 time(s)
+FlipFlop Brains/inst_4 has been replicated 2 time(s)
+FlipFlop Brains/inst_5 has been replicated 2 time(s)
+FlipFlop Brains/inst_6 has been replicated 2 time(s)
+FlipFlop Brains/inst_7 has been replicated 2 time(s)
+FlipFlop Brains/state_FSM_FFd2 has been replicated 1 time(s)
+FlipFlop Brains/state_FSM_FFd3 has been replicated 2 time(s)
+FlipFlop Brains/state_FSM_FFd4 has been replicated 3 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 476
+ Flip-Flops                                            : 476
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : CPU.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 1755
+#      GND                         : 1
+#      INV                         : 10
+#      LUT1                        : 47
+#      LUT2                        : 20
+#      LUT3                        : 106
+#      LUT4                        : 393
+#      LUT5                        : 152
+#      LUT6                        : 403
+#      MUXCY                       : 455
+#      MUXF7                       : 8
+#      VCC                         : 1
+#      XORCY                       : 159
+# FlipFlops/Latches                : 476
+#      FDE                         : 42
+#      FDR                         : 82
+#      FDRE                        : 337
+#      FDSE                        : 15
+# RAMS                             : 32
+#      RAMB16BWER                  : 32
+# Clock Buffers                    : 3
+#      BUFG                        : 3
+# IO Buffers                       : 29
+#      IBUF                        : 3
+#      IBUFG                       : 1
+#      OBUF                        : 25
+# DCMs                             : 1
+#      DCM_SP                      : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:             473  out of  18224     2%  
+ Number of Slice LUTs:                 1131  out of   9112    12%  
+    Number used as Logic:              1131  out of   9112    12%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:   1457
+   Number with an unused Flip Flop:     984  out of   1457    67%  
+   Number with an unused LUT:           326  out of   1457    22%  
+   Number of fully used LUT-FF pairs:   147  out of   1457    10%  
+   Number of unique control sets:        41
+
+IO Utilization: 
+ Number of IOs:                          29
+ Number of bonded IOBs:                  29  out of    232    12%  
+    IOB Flip Flops/Latches:               3
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               32  out of     32   100%  
+    Number using Block RAM only:         32
+ Number of BUFG/BUFGCTRLs:                3  out of     16    18%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+----------------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)            | Load  |
+-----------------------------------+----------------------------------+-------+
+clk                                | DCM_SP:CLKDV                     | 484   |
+Guts/motorOps/Mario/clkOut         | BUFG                             | 21    |
+Guts/motorOps/xAxis/enable         | NONE(Guts/motorOps/xAxis/stepOut)| 1     |
+Guts/motorOps/yAxis/enable         | NONE(Guts/motorOps/yAxis/stepOut)| 1     |
+Guts/motorOps/zAxis/enable         | NONE(Guts/motorOps/zAxis/stepOut)| 1     |
+-----------------------------------+----------------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 8.394ns (Maximum Frequency: 119.131MHz)
+   Minimum input arrival time before clock: 5.280ns
+   Maximum output required time after clock: 14.799ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 8.394ns (frequency: 119.131MHz)
+  Total number of paths / destination ports: 5764007683 / 1476
+-------------------------------------------------------------------------
+Delay:               16.788ns (Levels of Logic = 29)
+  Source:            Brains/op_1 (FF)
+  Destination:       Guts/Reg/Reg0/out_11 (FF)
+  Source Clock:      clk rising 0.5X
+  Destination Clock: clk rising 0.5X
+
+  Data Path: Brains/op_1 to Guts/Reg/Reg0/out_11
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.447   0.973  Brains/op_1 (Brains/op_1)
+     LUT3:I0->O            1   0.205   0.580  Brains/op[7]_GND_39_o_equal_89_o<7>_SW0 (N4)
+     LUT6:I5->O           19   0.205   1.300  Brains/op[7]_GND_39_o_equal_89_o<7> (Brains/op[7]_GND_39_o_equal_89_o)
+     LUT6:I3->O           16   0.205   1.109  Guts/BusB/B14/control_inv1 (Guts/BusB/B14/control_inv)
+     LUT4:I2->O            1   0.203   0.000  Guts/ALU_BUS_B<14>16 (Guts/ALU_BUS_B<14>16)
+     MUXCY:S->O            1   0.172   0.000  Guts/ALU_BUS_B<14>_MUXCY_0 (Guts/ALU_BUS_B<14>1)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_1 (Guts/ALU_BUS_B<14>2)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_2 (Guts/ALU_BUS_B<14>3)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_3 (Guts/ALU_BUS_B<14>4)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_4 (Guts/ALU_BUS_B<14>5)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_5 (Guts/ALU_BUS_B<14>6)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_6 (Guts/ALU_BUS_B<14>7)
+     MUXCY:CI->O          25   0.213   1.193  Guts/ALU_BUS_B<14>_MUXCY_7 (Guts/ALU_BUS_B<14>)
+     LUT4:I3->O            2   0.205   0.864  Guts/Mmux_mem_addrA61 (Guts/mem_addrA<14>)
+     LUT6:I2->O           17   0.203   1.132  Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>11 (Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>11)
+     LUT2:I0->O           18   0.203   1.050  Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>13 (Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>1)
+     LUT6:I5->O            2   0.205   0.617  Guts/IO/mem_doutA<6>3_1 (Guts/IO/mem_doutA<6>3)
+     LUT6:I5->O           12   0.205   0.909  Guts/Immediate/Opcode[7]_reduce_nor_3_o1_1 (Guts/Immediate/Opcode[7]_reduce_nor_3_o1)
+     LUT6:I5->O            6   0.205   0.744  Guts/Mmux_ALU_BUS_A121 (Guts/ALU_BUS_A<5>)
+     MUXCY:DI->O           1   0.145   0.000  Guts/ALU/Madd_n0143_cy<5> (Guts/ALU/Madd_n0143_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU/Madd_n0143_cy<6> (Guts/ALU/Madd_n0143_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU/Madd_n0143_cy<7> (Guts/ALU/Madd_n0143_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU/Madd_n0143_cy<8> (Guts/ALU/Madd_n0143_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU/Madd_n0143_cy<9> (Guts/ALU/Madd_n0143_cy<9>)
+     XORCY:CI->O           2   0.180   0.617  Guts/ALU/Madd_n0143_xor<10> (Guts/ALU/n0143<10>)
+     LUT1:I0->O            1   0.205   0.000  Guts/ALU/Madd_A[15]_GND_29_o_add_13_OUT_cy<10>_rt (Guts/ALU/Madd_A[15]_GND_29_o_add_13_OUT_cy<10>_rt)
+     MUXCY:S->O            1   0.172   0.000  Guts/ALU/Madd_A[15]_GND_29_o_add_13_OUT_cy<10> (Guts/ALU/Madd_A[15]_GND_29_o_add_13_OUT_cy<10>)
+     XORCY:CI->O           2   0.180   0.616  Guts/ALU/Madd_A[15]_GND_29_o_add_13_OUT_xor<11> (Guts/ALU/A[15]_GND_29_o_add_13_OUT<11>)
+     MUXF7:S->O            1   0.148   0.684  Guts/Data_Bus<11>LogicTrst6_SW1 (N375)
+     LUT6:I4->O           16   0.203   0.000  Guts/Data_Bus<11>LogicTrst9 (Guts/Data_Bus<11>)
+     FDRE:D                    0.102          Guts/Reg/Reg15/out_11
+    ----------------------------------------
+    Total                     16.788ns (4.401ns logic, 12.387ns route)
+                                       (26.2% logic, 73.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'Guts/motorOps/Mario/clkOut'
+  Clock period: 4.831ns (frequency: 206.979MHz)
+  Total number of paths / destination ports: 534 / 52
+-------------------------------------------------------------------------
+Delay:               4.831ns (Levels of Logic = 3)
+  Source:            Guts/motorOps/Mario/counter_3 (FF)
+  Destination:       Guts/motorOps/Mario/nesControl_7 (FF)
+  Source Clock:      Guts/motorOps/Mario/clkOut rising
+  Destination Clock: Guts/motorOps/Mario/clkOut rising
+
+  Data Path: Guts/motorOps/Mario/counter_3 to Guts/motorOps/Mario/nesControl_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             6   0.447   1.109  Guts/motorOps/Mario/counter_3 (Guts/motorOps/Mario/counter_3)
+     LUT6:I0->O            2   0.203   0.617  Guts/motorOps/Mario/n00151_SW0 (N16)
+     LUT6:I5->O            1   0.205   0.924  Guts/motorOps/Mario/n00151 (Guts/motorOps/Mario/n0015)
+     LUT6:I1->O            8   0.203   0.802  Guts/motorOps/Mario/_n0087_inv1 (Guts/motorOps/Mario/_n0087_inv)
+     FDSE:CE                   0.322          Guts/motorOps/Mario/nesControl_0
+    ----------------------------------------
+    Total                      4.831ns (1.380ns logic, 3.451ns route)
+                                       (28.6% logic, 71.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 452 / 452
+-------------------------------------------------------------------------
+Offset:              5.280ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Brains/op_7 (FF)
+  Destination Clock: clk rising 0.5X
+
+  Data Path: reset to Brains/op_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           402   1.222   2.327  reset_IBUF (reset_IBUF)
+     LUT5:I1->O           26   0.203   1.206  Brains/_n0288_inv1 (Brains/_n0288_inv)
+     FDE:CE                    0.322          Brains/inst_0
+    ----------------------------------------
+    Total                      5.280ns (1.747ns logic, 3.533ns route)
+                                       (33.1% logic, 66.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Guts/motorOps/Mario/clkOut'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              4.820ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Guts/motorOps/Mario/counter_0 (FF)
+  Destination Clock: Guts/motorOps/Mario/clkOut rising
+
+  Data Path: reset to Guts/motorOps/Mario/counter_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           402   1.222   2.080  reset_IBUF (reset_IBUF)
+     LUT6:I5->O           11   0.205   0.882  Guts/motorOps/Mario/Mcount_counter_val2 (Guts/motorOps/Mario/Mcount_counter_val)
+     FDRE:R                    0.430          Guts/motorOps/Mario/counter_0
+    ----------------------------------------
+    Total                      4.820ns (1.857ns logic, 2.963ns route)
+                                       (38.5% logic, 61.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Guts/motorOps/xAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.744ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Guts/motorOps/xAxis/stepOut (FF)
+  Destination Clock: Guts/motorOps/xAxis/enable rising
+
+  Data Path: reset to Guts/motorOps/xAxis/stepOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           402   1.222   2.308  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.205   0.579  Guts/motorOps/xAxis/directionA_directionB_OR_220_o_inv11 (Guts/motorOps/xAxis/directionA_directionB_OR_220_o_inv_0)
+     FDR:R                     0.430          Guts/motorOps/xAxis/stepOut
+    ----------------------------------------
+    Total                      4.744ns (1.857ns logic, 2.887ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Guts/motorOps/yAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.744ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Guts/motorOps/yAxis/stepOut (FF)
+  Destination Clock: Guts/motorOps/yAxis/enable rising
+
+  Data Path: reset to Guts/motorOps/yAxis/stepOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           402   1.222   2.308  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.205   0.579  Guts/motorOps/yAxis/directionA_directionB_OR_220_o_inv11 (Guts/motorOps/yAxis/directionA_directionB_OR_220_o_inv_0)
+     FDR:R                     0.430          Guts/motorOps/yAxis/stepOut
+    ----------------------------------------
+    Total                      4.744ns (1.857ns logic, 2.887ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'Guts/motorOps/zAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              4.744ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       Guts/motorOps/zAxis/stepOut (FF)
+  Destination Clock: Guts/motorOps/zAxis/enable rising
+
+  Data Path: reset to Guts/motorOps/zAxis/stepOut
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           402   1.222   2.308  reset_IBUF (reset_IBUF)
+     LUT3:I0->O            1   0.205   0.579  Guts/motorOps/zAxis/directionA_directionB_OR_220_o_inv11 (Guts/motorOps/zAxis/directionA_directionB_OR_220_o_inv_0)
+     FDR:R                     0.430          Guts/motorOps/zAxis/stepOut
+    ----------------------------------------
+    Total                      4.744ns (1.857ns logic, 2.887ns route)
+                                       (39.1% logic, 60.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 270633 / 21
+-------------------------------------------------------------------------
+Offset:              14.799ns (Levels of Logic = 17)
+  Source:            Brains/op_1 (FF)
+  Destination:       mem_doutA<6> (PAD)
+  Source Clock:      clk rising 0.5X
+
+  Data Path: Brains/op_1 to mem_doutA<6>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              6   0.447   0.973  Brains/op_1 (Brains/op_1)
+     LUT3:I0->O            1   0.205   0.580  Brains/op[7]_GND_39_o_equal_89_o<7>_SW0 (N4)
+     LUT6:I5->O           19   0.205   1.300  Brains/op[7]_GND_39_o_equal_89_o<7> (Brains/op[7]_GND_39_o_equal_89_o)
+     LUT6:I3->O           16   0.205   1.109  Guts/BusB/B14/control_inv1 (Guts/BusB/B14/control_inv)
+     LUT4:I2->O            1   0.203   0.000  Guts/ALU_BUS_B<14>16 (Guts/ALU_BUS_B<14>16)
+     MUXCY:S->O            1   0.172   0.000  Guts/ALU_BUS_B<14>_MUXCY_0 (Guts/ALU_BUS_B<14>1)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_1 (Guts/ALU_BUS_B<14>2)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_2 (Guts/ALU_BUS_B<14>3)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_3 (Guts/ALU_BUS_B<14>4)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_4 (Guts/ALU_BUS_B<14>5)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_5 (Guts/ALU_BUS_B<14>6)
+     MUXCY:CI->O           1   0.019   0.000  Guts/ALU_BUS_B<14>_MUXCY_6 (Guts/ALU_BUS_B<14>7)
+     MUXCY:CI->O          25   0.213   1.193  Guts/ALU_BUS_B<14>_MUXCY_7 (Guts/ALU_BUS_B<14>)
+     LUT4:I3->O            2   0.205   0.864  Guts/Mmux_mem_addrA61 (Guts/mem_addrA<14>)
+     LUT6:I2->O           17   0.203   1.132  Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>11 (Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>11)
+     LUT2:I0->O           18   0.203   1.050  Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>13 (Guts/IO/addrA[14]_PWR_22_o_equal_3_o<14>1)
+     LUT6:I5->O           43   0.205   1.448  Guts/IO/mem_doutA<6>3 (mem_doutA_6_OBUF)
+     OBUF:I->O                 2.571          mem_doutA_6_OBUF (mem_doutA<6>)
+    ----------------------------------------
+    Total                     14.799ns (5.151ns logic, 9.648ns route)
+                                       (34.8% logic, 65.2% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Guts/motorOps/Mario/clkOut'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Guts/motorOps/Mario/latch (FF)
+  Destination:       latch (PAD)
+  Source Clock:      Guts/motorOps/Mario/clkOut rising
+
+  Data Path: Guts/motorOps/Mario/latch to latch
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             1   0.447   0.579  Guts/motorOps/Mario/latch (Guts/motorOps/Mario/latch)
+     OBUF:I->O                 2.571          latch_OBUF (latch)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Guts/motorOps/xAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Guts/motorOps/xAxis/stepOut (FF)
+  Destination:       xStep (PAD)
+  Source Clock:      Guts/motorOps/xAxis/enable rising
+
+  Data Path: Guts/motorOps/xAxis/stepOut to xStep
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  Guts/motorOps/xAxis/stepOut (Guts/motorOps/xAxis/stepOut)
+     OBUF:I->O                 2.571          xStep_OBUF (xStep)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Guts/motorOps/yAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Guts/motorOps/yAxis/stepOut (FF)
+  Destination:       yStep (PAD)
+  Source Clock:      Guts/motorOps/yAxis/enable rising
+
+  Data Path: Guts/motorOps/yAxis/stepOut to yStep
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  Guts/motorOps/yAxis/stepOut (Guts/motorOps/yAxis/stepOut)
+     OBUF:I->O                 2.571          yStep_OBUF (yStep)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'Guts/motorOps/zAxis/enable'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.597ns (Levels of Logic = 1)
+  Source:            Guts/motorOps/zAxis/stepOut (FF)
+  Destination:       zStep (PAD)
+  Source Clock:      Guts/motorOps/zAxis/enable rising
+
+  Data Path: Guts/motorOps/zAxis/stepOut to zStep
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  Guts/motorOps/zAxis/stepOut (Guts/motorOps/zAxis/stepOut)
+     OBUF:I->O                 2.571          zStep_OBUF (zStep)
+    ----------------------------------------
+    Total                      3.597ns (3.018ns logic, 0.579ns route)
+                                       (83.9% logic, 16.1% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock Guts/motorOps/Mario/clkOut
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Guts/motorOps/Mario/clkOut|    4.831|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Guts/motorOps/xAxis/enable
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.856|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Guts/motorOps/yAxis/enable
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.856|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock Guts/motorOps/zAxis/enable
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.856|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+--------------------------+---------+---------+---------+---------+
+                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------+---------+---------+---------+---------+
+Guts/motorOps/Mario/clkOut|    1.542|         |         |         |
+clk                       |   16.788|         |         |         |
+--------------------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 30.00 secs
+Total CPU time to Xst completion: 30.13 secs
+ 
+--> 
+
+Total memory usage is 286464 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  182 (   0 filtered)
+Number of infos    :   34 (   0 filtered)
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.ncd
+OUTFILE=C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU\CPU.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\u0837708\Desktop\Documents\Dual Board\CPU SimTesting\XMenCPU
+LICENSE=WebPack
+USER_INFO=176175080_0_0_415

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -lib "secureip" -o "U:/My Documents/ECE 3710/Processor with control/XMenCPU/Test_CPU_isim_beh.exe" -prj "U:/My Documents/ECE 3710/Processor with control/XMenCPU/Test_CPU_beh.prj" "work.Test_CPU" "work.glbl" 

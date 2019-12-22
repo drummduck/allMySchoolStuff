@@ -1,0 +1,527 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> Reading design: FSM_Control.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FSM_Control.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FSM_Control"
+Output Format                      : NGC
+Target Device                      : xc6slx16-3-csg324
+
+---- Source Options
+Top Module Name                    : FSM_Control
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" into library work
+Parsing module <FSM_Control>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating module <FSM_Control>.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 116: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 117: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 118: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 119: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 120: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 121: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 122: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 123: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 132: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 133: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 134: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 135: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 140: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 145: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 150: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 154: Signal <instruction> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 253: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 267: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 338: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 418: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 487: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 566: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 635: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 719: Signal <op> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 735: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 819: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 906: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 993: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1071: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1153: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1222: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1303: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1386: Signal <inst> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1394: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1401: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1408: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1415: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1422: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v" Line 1429: Signal <flags> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <FSM_Control>.
+    Related source file is "C:\Users\Beef Jerky\Documents\Beef Jerky Documents\ECE 3710\XMenCPU\FSM_Control.v".
+        Reset = 4'b0000
+        Fetch = 4'b0001
+        Decode = 4'b0010
+        Rtype = 4'b0011
+        Itype = 4'b0100
+        Load_step1 = 4'b0101
+        Load_step2 = 4'b0110
+        Store = 4'b0111
+        JAL_step1 = 4'b1000
+        JAL_step2 = 4'b1001
+        RET = 4'b1010
+        Branch = 4'b1011
+        s11 = 4'b1100
+        s12 = 4'b1101
+        s13 = 4'b1110
+        s14 = 4'b1111
+WARNING:Xst:647 - Input <pc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+WARNING:Xst:647 - Input <flags<2:1>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 8-bit register for signal <op>.
+    Found 8-bit register for signal <inst>.
+    Found 4-bit register for signal <state>.
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 12                                             |
+    | Transitions        | 19                                             |
+    | Inputs             | 7                                              |
+    | Outputs            | 13                                             |
+    | Clock              | clk (rising_edge)                              |
+    | Reset              | reset (positive)                               |
+    | Reset type         | synchronous                                    |
+    | Reset State        | 0000                                           |
+    | Encoding           | auto                                           |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 16x16-bit Read Only RAM for signal <inst[7]_PWR_1_o_wide_mux_95_OUT>
+    Found 16x16-bit Read Only RAM for signal <inst[3]_PWR_1_o_wide_mux_98_OUT>
+    Found 1-bit 8-to-1 multiplexer for signal <_n0209> created at line 1386.
+    Summary:
+	inferred   2 RAM(s).
+	inferred  16 D-type flip-flop(s).
+	inferred  39 Multiplexer(s).
+	inferred   1 Finite State Machine(s).
+Unit <FSM_Control> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x16-bit single-port Read Only RAM                   : 2
+# Registers                                            : 2
+ 8-bit register                                        : 2
+# Multiplexers                                         : 39
+ 1-bit 2-to-1 multiplexer                              : 12
+ 1-bit 8-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 26
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <FSM_Control>.
+INFO:Xst:3231 - The small RAM <Mram_inst[7]_PWR_1_o_wide_mux_95_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<7:4>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+INFO:Xst:3231 - The small RAM <Mram_inst[3]_PWR_1_o_wide_mux_98_OUT> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 16-word x 16-bit                    |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <inst<3:0>>     |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <FSM_Control> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 2
+ 16x16-bit single-port distributed Read Only RAM       : 2
+# Registers                                            : 16
+ Flip-Flops                                            : 16
+# Multiplexers                                         : 39
+ 1-bit 2-to-1 multiplexer                              : 12
+ 1-bit 8-to-1 multiplexer                              : 1
+ 16-bit 2-to-1 multiplexer                             : 26
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+Analyzing FSM <MFsm> for best encoding.
+Optimizing FSM <FSM_0> on signal <state[1:4]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ 0000  | 0000
+ 0001  | 0001
+ 0010  | 0010
+ 1011  | 1011
+ 1010  | 1010
+ 1000  | 1000
+ 0111  | 0111
+ 0101  | 0101
+ 0100  | 0100
+ 0011  | 0011
+ 0110  | 0110
+ 1001  | 1001
+-------------------
+
+Optimizing unit <FSM_Control> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FSM_Control, actual ratio is 1.
+FlipFlop state_FSM_FFd1 has been replicated 1 time(s)
+FlipFlop state_FSM_FFd2 has been replicated 2 time(s)
+FlipFlop state_FSM_FFd4 has been replicated 2 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 25
+ Flip-Flops                                            : 25
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : FSM_Control.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 140
+#      GND                         : 1
+#      INV                         : 1
+#      LUT2                        : 4
+#      LUT3                        : 14
+#      LUT4                        : 19
+#      LUT5                        : 21
+#      LUT6                        : 80
+# FlipFlops/Latches                : 25
+#      FD                          : 2
+#      FDE                         : 16
+#      FDR                         : 7
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 84
+#      IBUF                        : 20
+#      OBUF                        : 64
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx16csg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              25  out of  18224     0%  
+ Number of Slice LUTs:                  139  out of   9112     1%  
+    Number used as Logic:               139  out of   9112     1%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    142
+   Number with an unused Flip Flop:     117  out of    142    82%  
+   Number with an unused LUT:             3  out of    142     2%  
+   Number of fully used LUT-FF pairs:    22  out of    142    15%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                         103
+ Number of bonded IOBs:                  85  out of    232    36%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 25    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 2.558ns (Maximum Frequency: 390.976MHz)
+   Minimum input arrival time before clock: 4.974ns
+   Maximum output required time after clock: 9.174ns
+   Maximum combinational path delay: 6.326ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 2.558ns (frequency: 390.976MHz)
+  Total number of paths / destination ports: 116 / 41
+-------------------------------------------------------------------------
+Delay:               2.558ns (Levels of Logic = 1)
+  Source:            state_FSM_FFd4_1 (FF)
+  Destination:       inst_0 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: state_FSM_FFd4_1 to inst_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.447   0.579  state_FSM_FFd4_1 (state_FSM_FFd4_1)
+     INV:I->O             16   0.206   1.004  _n0224_inv1_cepot_INV_0 (_n0224_inv1_cepot)
+     FDE:CE                    0.322          inst_0
+    ----------------------------------------
+    Total                      2.558ns (0.975ns logic, 1.583ns route)
+                                       (38.1% logic, 61.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 128 / 32
+-------------------------------------------------------------------------
+Offset:              4.974ns (Levels of Logic = 4)
+  Source:            instruction<14> (PAD)
+  Destination:       state_FSM_FFd3 (FF)
+  Destination Clock: clk rising
+
+  Data Path: instruction<14> to state_FSM_FFd3
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             9   1.222   1.194  instruction_14_IBUF (instruction_14_IBUF)
+     LUT6:I0->O            1   0.203   0.924  state_FSM_FFd3-In1 (state_FSM_FFd3-In1)
+     LUT5:I0->O            1   0.203   0.924  state_FSM_FFd3-In2 (state_FSM_FFd3-In2)
+     LUT5:I0->O            1   0.203   0.000  state_FSM_FFd3-In3 (state_FSM_FFd3-In)
+     FDR:D                     0.102          state_FSM_FFd3
+    ----------------------------------------
+    Total                      4.974ns (1.933ns logic, 3.041ns route)
+                                       (38.9% logic, 61.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 1599 / 60
+-------------------------------------------------------------------------
+Offset:              9.174ns (Levels of Logic = 6)
+  Source:            op_6 (FF)
+  Destination:       Reg_write<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: op_6 to Reg_write<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              3   0.447   0.755  op_6 (op_6)
+     LUT2:I0->O            1   0.203   0.580  op[7]_GND_1_o_equal_78_o<7>1_SW0 (N2)
+     LUT6:I5->O            6   0.205   1.089  op[7]_GND_1_o_equal_78_o<7>1 (op[7]_GND_1_o_equal_78_o<7>1)
+     LUT6:I1->O            4   0.203   0.788  op[7]_op[7]_OR_52_o1 (op[7]_op[7]_OR_52_o)
+     LUT2:I0->O           16   0.203   1.349  Mmux_PCen111 (Mmux_PCen11)
+     LUT6:I1->O            1   0.203   0.579  Mmux_Read_Reg_BusB1221 (Reg_write_9_OBUF)
+     OBUF:I->O                 2.571          Reg_write_9_OBUF (Reg_write<9>)
+    ----------------------------------------
+    Total                      9.174ns (4.035ns logic, 5.139ns route)
+                                       (44.0% logic, 56.0% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 5 / 1
+-------------------------------------------------------------------------
+Delay:               6.326ns (Levels of Logic = 4)
+  Source:            flags<3> (PAD)
+  Destination:       branch_ctrl (PAD)
+
+  Data Path: flags<3> to branch_ctrl
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.222   0.864  flags_3_IBUF (flags_3_IBUF)
+     LUT6:I2->O            1   0.203   0.684  Mmux_branch_ctrl12 (Mmux_branch_ctrl11)
+     LUT6:I4->O            1   0.203   0.579  Mmux_branch_ctrl13 (branch_ctrl_OBUF)
+     OBUF:I->O                 2.571          branch_ctrl_OBUF (branch_ctrl)
+    ----------------------------------------
+    Total                      6.326ns (4.199ns logic, 2.127ns route)
+                                       (66.4% logic, 33.6% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.558|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.68 secs
+ 
+--> 
+
+Total memory usage is 258468 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   41 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
+

@@ -1,0 +1,123 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml CPU.twx CPU.ncd -o CPU.twr CPU.pcf -ucf CPU.ucf
+
+Design file:              CPU.ncd
+Physical constraint file: CPU.pcf
+Device,package,speed:     xc6slx16,csg324,C,-3 (PRODUCTION 1.23 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+enable      |    2.860(R)|      SLOW  |   -1.369(R)|      FAST  |CLK_OUT1          |   0.000|
+reset       |   13.443(R)|      SLOW  |   -1.716(R)|      FAST  |CLK_OUT1          |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination  |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+an0          |         5.566(R)|      SLOW  |         3.589(R)|      FAST  |CLK_OUT1          |   0.000|
+an1          |         5.516(R)|      SLOW  |         3.575(R)|      FAST  |CLK_OUT1          |   0.000|
+an2          |         5.537(R)|      SLOW  |         3.587(R)|      FAST  |CLK_OUT1          |   0.000|
+an3          |         5.657(R)|      SLOW  |         3.649(R)|      FAST  |CLK_OUT1          |   0.000|
+ca           |         5.715(R)|      SLOW  |         3.695(R)|      FAST  |CLK_OUT1          |   0.000|
+cb           |         5.793(R)|      SLOW  |         3.745(R)|      FAST  |CLK_OUT1          |   0.000|
+cc           |         6.080(R)|      SLOW  |         3.909(R)|      FAST  |CLK_OUT1          |   0.000|
+cd           |         5.877(R)|      SLOW  |         3.785(R)|      FAST  |CLK_OUT1          |   0.000|
+ce           |         5.933(R)|      SLOW  |         3.821(R)|      FAST  |CLK_OUT1          |   0.000|
+cf           |         5.992(R)|      SLOW  |         3.854(R)|      FAST  |CLK_OUT1          |   0.000|
+cg           |         6.082(R)|      SLOW  |         3.939(R)|      FAST  |CLK_OUT1          |   0.000|
+expired      |         6.440(R)|      SLOW  |         4.177(R)|      FAST  |CLK_OUT1          |   0.000|
+hSync        |        10.799(R)|      SLOW  |         6.600(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<0> |        13.481(R)|      SLOW  |         6.575(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<1> |        14.089(R)|      SLOW  |         6.398(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<2> |        13.865(R)|      SLOW  |         7.403(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<3> |        12.435(R)|      SLOW  |         7.228(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<4> |        12.533(R)|      SLOW  |         5.989(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<5> |        12.694(R)|      SLOW  |         6.062(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<6> |        11.715(R)|      SLOW  |         5.918(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<7> |        10.974(R)|      SLOW  |         5.843(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<8> |        10.621(R)|      SLOW  |         6.223(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<9> |        10.519(R)|      SLOW  |         6.357(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<10>|        10.848(R)|      SLOW  |         6.572(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<11>|        10.709(R)|      SLOW  |         6.576(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<12>|        11.764(R)|      SLOW  |         5.447(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<13>|        12.329(R)|      SLOW  |         5.899(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<14>|        11.481(R)|      SLOW  |         5.849(R)|      FAST  |CLK_OUT1          |   0.000|
+mem_doutA<15>|        11.952(R)|      SLOW  |         5.761(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<0>       |        15.797(R)|      SLOW  |         6.289(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<1>       |        16.040(R)|      SLOW  |         6.456(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<2>       |        16.302(R)|      SLOW  |         6.612(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<3>       |        16.119(R)|      SLOW  |         6.519(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<4>       |        16.047(R)|      SLOW  |         6.454(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<5>       |        16.229(R)|      SLOW  |         6.565(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<6>       |        16.067(R)|      SLOW  |         6.479(R)|      FAST  |CLK_OUT1          |   0.000|
+rgb<7>       |        16.067(R)|      SLOW  |         6.479(R)|      FAST  |CLK_OUT1          |   0.000|
+vSync        |        10.793(R)|      SLOW  |         6.039(R)|      FAST  |CLK_OUT1          |   0.000|
+-------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |   15.430|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+reset          |hSync          |   13.489|
+reset          |rgb<0>         |   14.825|
+reset          |rgb<1>         |   15.068|
+reset          |rgb<2>         |   15.330|
+reset          |rgb<3>         |   15.147|
+reset          |rgb<4>         |   15.075|
+reset          |rgb<5>         |   15.257|
+reset          |rgb<6>         |   15.095|
+reset          |rgb<7>         |   15.095|
+reset          |vSync          |   11.978|
+---------------+---------------+---------+
+
+
+Analysis completed Fri Dec 11 06:46:28 2015 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 246 MB
+
+
+
