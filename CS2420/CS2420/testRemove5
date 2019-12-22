@@ -1,0 +1,22 @@
+digraph BST {
+node [shape=record]
+20[label="<L> |<D> 20|<R> "]
+10[label="<L> |<D> 10|<R> "]
+5[label="<L> |<D> 5|<R> "]
+2[label="<L> |<D> 2|<R> "]
+5:L -> 2:D
+6[label="<L> |<D> 6|<R> "]
+5:R -> 6:D
+10:L -> 5:D
+16[label="<L> |<D> 16|<R> "]
+11[label="<L> |<D> 11|<R> "]
+16:L -> 11:D
+19[label="<L> |<D> 19|<R> "]
+17[label="<L> |<D> 17|<R> "]
+19:L -> 17:D
+16:R -> 19:D
+10:R -> 16:D
+20:L -> 10:D
+27[label="<L> |<D> 27|<R> "]
+20:R -> 27:D
+}
