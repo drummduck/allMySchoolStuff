@@ -1,0 +1,2 @@
+/home/ndonalds/CS3505/googletest/googletest/CMakeFiles/gtest_main.dir
+/home/ndonalds/CS3505/googletest/googletest/CMakeFiles/gtest.dir

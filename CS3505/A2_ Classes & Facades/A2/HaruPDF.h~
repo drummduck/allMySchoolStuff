@@ -1,0 +1,40 @@
+//Nathan Donaldson
+//A2: Classes & Facades
+//.h file for HaruPDF
+
+#include "../libharu/include/hpdf.h"
+#include <stdlib.h>
+#include <stdio.h>
+#include <string>
+#include <math.h>
+#include <iostream>
+
+class HaruPDF
+{
+
+float angle, rad1, x, y;
+HPDF_Doc pdf;
+HPDF_Page page;
+HPDF_Font font;
+const char* Text;
+
+
+public:
+
+HaruPDF();
+
+void createDoc();
+
+void setText(unsigned i, const char* Text, float rad1, float rad2, float x, float y);
+
+void saveFile(const char* fileName);
+
+const char* getText();
+
+
+};
+
+
+
+
+

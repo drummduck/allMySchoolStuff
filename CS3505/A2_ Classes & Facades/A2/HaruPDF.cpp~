@@ -1,0 +1,63 @@
+//Nathan Donaldson
+//A2: Classes and Facades
+// HaruPDF .cpp
+
+#include "HaruPDF.h"
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+
+using namespace std;
+
+HaruPDF::HaruPDF(){;}
+
+void HaruPDF::createDoc()
+{
+    pdf = HPDF_New(NULL,NULL);
+    page = HPDF_AddPage(pdf);
+    HPDF_Page_SetSize(page, HPDF_PAGE_SIZE_LETTER, HPDF_PAGE_PORTRAIT);
+
+    font = HPDF_GetFont(pdf, "Helvetica",NULL);
+    HPDF_Page_SetTextLeading(page,20);
+    HPDF_Page_SetGrayStroke(page,0);
+    HPDF_Page_BeginText(page);
+    font = HPDF_GetFont(pdf, "Courier-Bold",NULL);
+    HPDF_Page_SetFontAndSize(page,font,30);
+
+
+
+    return;
+}
+
+void HaruPDF::setText(unsigned i, const char* Text, float rad1, float rad2, float x, float y)
+{
+     char buf[2];
+
+     HPDF_Page_SetTextMatrix(page, cos(rad1), sin(rad1), -sin(rad1), cos(rad1), x, y);
+     buf[0] = Text[i];
+     buf[1] = 0;
+     HPDF_Page_ShowText (page, buf);
+     angle -= 10.0;
+
+     return;
+}
+
+void HaruPDF::saveFile(const char* fileName)
+{
+
+    HPDF_SaveToFile(pdf,fileName);
+
+    HPDF_Free(pdf);
+
+    return;
+}
+
+
+const char* HaruPDF::HaruPDF::getText()
+{
+
+    return Text;
+
+}
+
+

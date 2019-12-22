@@ -1,0 +1,38 @@
+//Nathan Donaldson
+//A3:Rule-of-Three and the Trie
+//
+
+#include "Node.h"
+#include <stdlib.h>
+#include <vector>
+#include <string>
+#include <cstddef>
+#include <math.h>
+
+class Trie
+{
+
+    Node root;
+    std::string word;
+
+public:
+
+
+    void addword(std::string inWord);
+
+    bool isWord(std::string inWord);
+
+    std::vector<std::string> allWordsWithPrefix(std::string preWord);
+
+    ~Trie();
+
+    Trie();
+
+    Trie(const Trie& other);
+
+    Trie& operator=(const Trie& other);
+
+    int getIndex(char letter);
+
+    std::vector<std::string> PreRecurse(Node* node, std::vector<std::string> words, std::string letters);
+};

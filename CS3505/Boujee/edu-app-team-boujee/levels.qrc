@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/json">
+        <file>levels/level1.txt</file>
+        <file>lessons/lesson1.txt</file>
+        <file>levels/level2.txt</file>
+        <file>lessons/lesson2.txt</file>
+        <file>lessons/lesson3.txt</file>
+        <file>levels/level3.txt</file>
+        <file>lessons/lesson4.txt</file>
+        <file>lessons/lesson5.txt</file>
+        <file>lessons/lesson6.txt</file>
+        <file>levels/level4.txt</file>
+        <file>levels/level5.txt</file>
+        <file>levels/level6.txt</file>
+    </qresource>
+</RCC>

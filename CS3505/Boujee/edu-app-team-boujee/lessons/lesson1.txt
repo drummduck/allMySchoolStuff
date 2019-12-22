@@ -1,0 +1,135 @@
+{
+    "gravity" : 0.0,
+    "ballPath" : ":/textures/textures/ball.png",
+    "ballRadius" : 25,
+    "leftBound" : -1000.0,
+    "topBound" : -1000.0,
+    "rightBound" : 2000.0,
+    "botBound" : 5000.0,
+    "ballLocationX" : 200.0,
+    "ballLocationY" : 600.0,
+    "ballWidth" : 50.0,
+    "ballHeight" : 48.0,
+    "ballDensity" : 0.05,
+    "ballFriction" : 0.5,
+    "ballRestitution" : 0.7,
+    "launcherType" : 0,
+    "launcherAngle": 0,
+    "launcherMagnitude": 15,
+    "bgimg" : ":/textures/textures/Nebula.png",
+    "textBoxes" : [
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Hello. My name is Boujee the Cat. \nWelcome to Boujee Ball.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Together we will learn basic physics. Meow.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Physics defines the rules that control \nhow the world works around us.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "One rule is that things that are sitting \nstill like to stay still. ",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Things will not move unless something else \nmakes it move.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "This concept is also known as a force.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "The boujee ball here is currently sitting still.\nThe cannon will apply a force to the ball.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Press play to watch what happens when the cannon\napplies force to the ball.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },{
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "In this level, the cannon will apply a force to the ball.",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },{
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Try to aim the cannon at the hoop, and use\nenough force to make the shot in",
+            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "The left/right arrows control the speed of the shot, \nwhile the up/down arrows control where you are aiming.",            "textSize" : 30,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }
+    ]
+}

@@ -1,0 +1,312 @@
+//Nathan Donaldson
+//A3:Rule-of-Three and the Trie
+//
+
+#include "Trie.h"
+#include <vector>
+#include <string>
+#include <stdlib.h>
+#include <cstddef>
+#include <iostream>
+
+using namespace std;
+
+Trie::Trie(){;}
+
+
+//Did not have to do anything for this because all data was held in Nodes. Never created a NEW node in this class. Node has its own destructor and runs at end.
+Trie::~Trie()
+{
+
+
+}
+
+Trie::Trie(const Trie& other)
+{
+
+
+}
+
+void Trie::addword(std::string newWord)
+{
+
+    Node* node;
+
+    if(newWord == "")
+    {
+        return;
+    }
+
+    else if(root.NullPointer(getIndex(newWord[0])))
+            {
+               root.newNode(getIndex(newWord[0]));
+               node = root.returnNode(getIndex(newWord[0]));
+               node->setLetter(newWord[0]);
+            }
+
+
+    else if(root.returnNode(getIndex(newWord[0]))->checkLetter(newWord[0]))
+    {
+        node = root.returnNode(getIndex(newWord[0]));
+    }
+
+    else
+    {
+        cout << "unknown error" << endl;
+        return;
+    }
+
+
+
+    for(unsigned i = 0; i < newWord.size(); i++)
+    {
+
+        if(i == newWord.size() - 1)
+            {
+                node->setTrue();
+                return;
+            }
+
+
+
+            if(node->NullPointer(getIndex(newWord[i+1])))
+                {
+
+                    node->newNode(getIndex(newWord[i+1]));
+                    node = node->returnNode(getIndex(newWord[i+1]));
+                    node->setLetter(newWord[i+1]);
+
+                }
+
+
+            else if(node->returnNode(getIndex(newWord[i+1]))->checkLetter(newWord[i+1]))
+            {
+                node = node->returnNode(getIndex(newWord[i+1]));
+            }
+
+            else
+            {
+                cout << "unknown error occured" << endl;
+                return;
+            }
+
+    }
+    return;
+    
+}
+
+bool Trie::isWord(std::string checkWord)
+{
+    Node* node;
+
+
+    if(checkWord == "")
+    {
+        return false;
+    }
+
+    else if(root.NullPointer(getIndex(checkWord[0])))
+    {
+        return false;
+    }
+
+    else if(root.returnNode(getIndex(checkWord[0]))->checkLetter(checkWord[0]))
+    {
+        node = root.returnNode(getIndex(checkWord[0]));
+    }
+
+    else
+    {
+        cout << "dont know what happened" << endl;
+        return false;
+    }
+
+    std::string word = "";
+
+    for(unsigned i = 0; i < checkWord.size(); i++)
+    {
+        word += node->getLetter();
+
+        if(word == checkWord && node->getBool())
+        {
+            return true;
+        }
+
+        else if(node->NullPointer(getIndex(checkWord[i+1])))
+        {
+            return false;
+        }
+
+
+        else if(node->returnNode(getIndex(checkWord[i+1]))->checkLetter(checkWord[i+1]))
+        {
+
+            node = node->returnNode(getIndex(checkWord[i+1]));
+
+        }
+
+
+        else
+        {
+
+
+            return false;
+
+        }
+
+    }
+
+    return false;
+
+}
+
+std::vector<std::string> Trie::allWordsWithPrefix(std::string preWord)
+{
+
+    string preCheck = "";
+    std::vector<std::string> preWords;
+    Node* node;
+
+    if(preWord == "")
+       {
+
+
+           for(int i = 0; i < 26; i++)
+           {
+
+
+              if(root.NullPointer(getIndex(preWord[i])))
+                {
+                    continue;
+                }
+
+              else
+                {
+
+                    node = root.returnNode(i);
+                    preCheck = node->getLetter();
+                    if(node->getBool())
+                    {
+                        preWords.push_back(preCheck);
+                    }
+
+
+                }
+
+
+              preWords = PreRecurse(node, preWords, preCheck);
+
+           }
+
+           return preWords;
+       }
+
+    else if(root.NullPointer(getIndex(preWord[0])))
+       {
+          return preWords;
+       }
+
+    else if(root.returnNode(getIndex(preWord[0]))->checkLetter(preWord[0]))
+       {
+          node = root.returnNode(getIndex(preWord[0]));
+       }
+
+    else
+       {
+          cout << "unknown error" << endl;
+
+          return preWords;
+       }
+
+    for(unsigned i = 0; i < preWord.size(); i++)
+    {
+
+       preCheck += node->getLetter();
+
+       if(preCheck == preWord)
+          {
+              if(node->getBool())
+              {
+                  preWords.push_back(preCheck);
+              }
+
+             preWords = PreRecurse(node, preWords, preCheck);
+
+             return preWords;
+
+          }
+
+       if(node->NullPointer(getIndex(preWord[i+1])))
+          {
+              continue;
+          }
+
+        else if(node->returnNode(getIndex(preWord[i+1]))->checkLetter(preWord[i+1]))
+          {
+             node = node->returnNode(getIndex(preWord[i+1]));
+          }
+
+        else
+          {
+             cout << "unknown error occured" << endl;
+             return preWords;
+          }
+
+    }
+    return preWords;
+
+}
+
+
+
+Trie& Trie::operator=(const Trie& other)
+{
+
+
+}
+
+int Trie::getIndex(char letter)
+{
+    int i = ((int)letter)-((int)'a');
+
+    return i;
+}
+
+
+vector<string> Trie::PreRecurse(Node* node, vector<string> words, string letters)
+{
+    vector<string> preWords = words;
+    string preCheck = letters;
+    Node* newNode;
+
+
+    for(int i = 0; i < 26; i++)
+       {
+
+          if(node->NullPointer(i))
+             {
+                 continue;
+             }
+
+          else
+             {
+
+               newNode = node->returnNode(i);
+
+               preCheck += newNode->getLetter();
+
+
+               if(newNode->getBool())
+               {
+                       preWords.push_back(preCheck);
+               }
+
+               preWords =  PreRecurse(newNode, preWords, preCheck);
+
+               preCheck = letters;
+             }
+       }
+
+    return preWords;
+
+}

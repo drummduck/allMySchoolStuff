@@ -1,0 +1,5 @@
+/home/amcghie/CS3505/Box2D-master/Box2D/Build/Testbed/CMakeFiles/Testbed.dir
+/home/amcghie/CS3505/Box2D-master/Box2D/Build/glfw/CMakeFiles/glfw.dir
+/home/amcghie/CS3505/Box2D-master/Box2D/Build/glew/CMakeFiles/glew.dir
+/home/amcghie/CS3505/Box2D-master/Box2D/Build/HelloWorld/CMakeFiles/HelloWorld.dir
+/home/amcghie/CS3505/Box2D-master/Box2D/Build/Box2D/CMakeFiles/Box2D.dir

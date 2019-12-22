@@ -1,0 +1,22 @@
+//Spiral h bitch
+
+#include "HaruPDF.h"
+#include <math.h>
+#include <stdlib.h>
+#include <iostream>
+
+class Spiral
+{
+    double centerX, centerY, radius, spiralAngle, textAngle;
+    float angle = 90;
+    int prePlus = 0;
+public:
+    Spiral(double centerX, double centerY, double radius);
+    void operator++(int dummy);
+    void operator++();
+    double get_text_x();
+    double get_text_y();
+    double get_spiral_angle();
+    double get_text_angle();
+    friend std::ostream& operator<<(std::ostream& output, Spiral spiral);
+};

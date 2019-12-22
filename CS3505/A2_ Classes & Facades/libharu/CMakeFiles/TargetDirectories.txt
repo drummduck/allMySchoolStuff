@@ -1,0 +1,2 @@
+/home/ndonalds/CS3505/A2/libharu/src/CMakeFiles/hpdf.dir
+/home/ndonalds/CS3505/A2/libharu/src/CMakeFiles/hpdfs.dir

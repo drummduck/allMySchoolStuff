@@ -1,0 +1,65 @@
+//Lab 5
+
+#include <iostream>
+#include <string>
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Animal {
+protected:
+   double age;
+   string name;
+public:
+   Animal(string n) : name(n), age(0) {};
+   virtual void speak() {
+      cout << "I am an Animal named " << name << endl;
+   }
+   virtual void incrementAge() {
+   age += 1.0;
+   }
+};
+
+class Cat : public Animal {
+   bool isHouseCat;
+public:
+   Cat(string catName, bool houseCat) : m_catName(catName), m_houseCat(houseCat){}
+
+   virtual void speak() {
+      cout << "Meow" << " and I am " << name << " and my housecatness is " << isHouseCat << endl;
+   }
+};
+
+class Dog : public Animal {
+   bool isDog;
+public:
+   Cat(string dogName, bool Dog) : m_dogName(dogName), m_Dog(Dog){}
+
+   virtual void speak() {
+      cout << "Woof" << " and I am " << name << " and my dogness is " << isDog << endl;
+   }
+};
+
+int main()
+{
+
+Cat sparkles;
+Dog Kupo;
+Animal animal;
+
+std::vector<Animal*> vec;
+
+vec.push_back(&sparkles);
+vec.push_back(&Kupo);
+vec.push_back(&animal);
+
+for(auto Animal : vec)
+{
+
+Animal->speak();
+
+}
+
+return 0;
+}

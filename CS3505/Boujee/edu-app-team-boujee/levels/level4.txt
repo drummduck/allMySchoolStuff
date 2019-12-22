@@ -1,0 +1,90 @@
+{
+    "hoopLocationX": 1025.0,
+    "hoopLocationY": 300.0,
+    "hoopSize": 145.0,
+    "hoopTexture" : ":/textures/textures/rim.png",
+    "rimWidth": 30.0,
+    "rimHeight" : 30.0,
+    "ballRadius": 25.0,
+    "leftBound": -1000.0,
+    "topBound": -2000.0,
+    "rightBound": 2000.0,
+    "botBound": 5000.0,
+    "ballLocationX": 100.0,
+    "ballLocationY": 100.0,
+    "ballWidth": 50.0,
+    "ballHeight": 48.0,
+    "ballDensity": 0.03,
+    "ballFriction": 0.3,
+    "ballRestitution": 0.5,
+    "gravity": 9.81,
+    "launcherType" : 0,
+    "ballPath" : ":/textures/textures/beachBall.png",
+    "bgimg" : ":/textures/textures/oceanHorizon.png",
+  "rectObjects": [
+    {
+      "xVal": 400.0,
+      "yVal": 600.0,
+      "width": 600.0,
+      "height": 150.0,
+      "tag": "obs",
+      "texturePath": ":/textures/textures/court.png"
+    },{
+    "xVal": 1025.0,
+    "yVal": 690.0,
+    "width": 53.0,
+    "height": 65.0,
+    "tag": "dynamite",
+    "texturePath": ":/textures/textures/dynamite.png"
+   }
+  ],
+  "polyObjects" : [
+        {
+          "size" : 4,
+          "vertices" : [
+                 {
+                        "x" : 50.0,
+                        "y" : 0.0
+                 }, {
+                        "x" : 50.0,
+                        "y" : -250.0
+                 }, {
+                        "x" : 0.0,
+                        "y" : -250.0
+                 }, {
+                        "x" : 0.0,
+                        "y" : 0.0
+                 }
+          ],
+          "xVal" : 500.0,
+          "yVal" : 200.0,
+          "texturePath" : ":/textures/textures/brickTexture.png",
+          "tag" : "obs"
+        },{
+        "size" : 4,
+        "vertices" : [
+               {
+                      "x" : 0.0,
+                      "y" : 0.0
+               }, {
+                      "x" : 1280.0,
+                      "y" : 0.0
+               }, {
+                      "x" : 1280.0,
+                      "y" : 20.0
+               }, {
+                      "x" : 0.0,
+                      "y" : 20.0
+               }
+        ],
+        "xVal" : 0.0,
+        "yVal" : 0.0,
+        "texturePath" : ":/textures/textures/brickTexture.png",
+        "density" : 1,
+        "restitution" : 0.1,
+        "dynamic" : 0,
+        "friction" : 1.0,
+        "tag" : "obs"
+      }
+  ]
+}

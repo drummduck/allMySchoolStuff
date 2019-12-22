@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginForm</class>
+ <widget class="QWidget" name="LoginForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1014</width>
+    <height>634</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QLabel" name="gameTitle">
+   <property name="geometry">
+    <rect>
+     <x>310</x>
+     <y>10</y>
+     <width>611</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Century Schoolbook L</family>
+     <pointsize>72</pointsize>
+     <weight>75</weight>
+     <italic>true</italic>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Panel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <property name="text">
+    <string>Boujee Ball</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="notification">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>280</y>
+     <width>341</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Please enter username and password</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="password">
+   <property name="geometry">
+    <rect>
+     <x>482</x>
+     <y>360</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>PASSWORD</string>
+   </property>
+   <property name="echoMode">
+    <enum>QLineEdit::Password</enum>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="userName">
+   <property name="geometry">
+    <rect>
+     <x>482</x>
+     <y>310</y>
+     <width>251</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>24</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>USERNAME</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="loginButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>410</y>
+     <width>331</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>LOGIN/CREATE USER</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="guestButton">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>460</y>
+     <width>151</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>12</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Play As Guest</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="createUser">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>410</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Create User</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updateUserLevel">
+   <property name="geometry">
+    <rect>
+     <x>617</x>
+     <y>410</y>
+     <width>141</width>
+     <height>41</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update User Level</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="deleteUser">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>370</y>
+     <width>151</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Delete User</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="teacherPassword">
+   <property name="geometry">
+    <rect>
+     <x>442</x>
+     <y>370</y>
+     <width>141</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>new password</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="teacherUserName">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>340</y>
+     <width>141</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>new username</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="updateTeacherUsername">
+   <property name="geometry">
+    <rect>
+     <x>620</x>
+     <y>340</y>
+     <width>131</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>user to update</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="teacherSpinBox">
+   <property name="geometry">
+    <rect>
+     <x>707</x>
+     <y>370</y>
+     <width>41</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>6</number>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="teacherDelete">
+   <property name="geometry">
+    <rect>
+     <x>790</x>
+     <y>340</y>
+     <width>151</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>user to delete</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="adminLabel">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>10</y>
+     <width>321</width>
+     <height>101</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Courier 10 Pitch</family>
+     <pointsize>40</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="text">
+    <string>Admin Page</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="backToLogin">
+   <property name="geometry">
+    <rect>
+     <x>440</x>
+     <y>510</y>
+     <width>161</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Back to Login</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="openAnalytics">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>510</y>
+     <width>171</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Open Analytics</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

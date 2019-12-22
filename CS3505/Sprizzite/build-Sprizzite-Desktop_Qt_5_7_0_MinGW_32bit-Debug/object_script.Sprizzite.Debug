@@ -1,0 +1,14 @@
+INPUT(
+./debug\main.o
+./debug\sprizzite.o
+./debug\model.o
+./debug\filedialog.o
+./debug\pixelcanvas.o
+./debug\sprite.o
+./debug\viewport.o
+./debug\qrc_buttons.o
+./debug\qrc_previewbuttons.o
+./debug\moc_sprizzite.o
+./debug\moc_model.o
+./debug\moc_filedialog.o
+);

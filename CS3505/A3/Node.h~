@@ -1,0 +1,25 @@
+//Nathan Donaldson
+//A3: Rule-of-Three & Trie
+
+
+class Node
+{
+
+    char letter;
+    bool isWord;
+    Node* ptrArray[26];
+
+
+public:
+
+    Node();
+    char getLetter();
+    void setLetter(char inLetter);
+    bool getBool();
+    void setTrue();
+    void setFalse();
+    Node* returnNode(int pos);
+    void newNode(int pos);
+    bool checkLetter(char checkLetter);
+    bool NullPointer(int pos);
+};

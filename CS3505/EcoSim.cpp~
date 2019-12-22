@@ -1,0 +1,264 @@
+//Nathan Donaldson
+//A1: C++ Starter
+//This program asks the user for 2 numbers to be used to simulate the population of a fox/rabbit ecosystem.
+
+
+
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <fstream>
+#include <cctype>
+#include <cstring>
+#include <istream>
+#include <cstdlib>
+#include <cmath>
+
+using namespace std;
+
+//Takes input from main and updates (by reference) the populations in main using formula's
+//Also calls charting to start the output process.
+void updatePopulations(double g, double K, double p, double m, double c, double &numRabbits, double &numFoxes);
+
+//Takes in values from updatePopulations and figures out order of cout and the spacing then calls plotCharacter for each character.
+void charting(double numRabbits, double numFoxes, double scale);
+
+//Takes in stepsPointer (pointer that points to steps int in main) and changes the value of what that pointer points to.
+void incrementCounter(int* pointer);
+
+//Takes in population amount from charting and the character that represents foxes/rabbits/both and prints spaces and the characters.
+void plotCharacter(int number, char character);
+
+
+//The main function asks the user for input. Then, with that input, it makes sure that the format is: #, #.
+//If the format is correct, the program then calls the updatePopulation function to simulate the population changes over a set number of iterations.
+//It also calls incrementCounter, which takes a pointer that points at the steps int and increments it until set number is reached.
+int main()
+{
+  //Rabbit population
+  double numRabbits;
+
+  //Fox population
+  double numFoxes;
+
+  //Amount of times to update population.
+  int steps;
+
+  //Integer pointer that points at steps integer.
+  int* stepsPointer;
+
+  //Rabbit population string from cin.
+  string numRabbitsStr;
+
+  //Fox population string from cin.
+  string numFoxesStr;
+
+  //The line of the input.
+  string input;
+
+  //Check if there is space between comma and second number
+  bool spaceCheck;
+
+  //Check if there is comma between first number and space
+  bool commaCheck;
+
+  //True once first number is read.
+  bool secondNum;
+
+  //set values for updatePopulation formula
+  double rabbitGrowth, predationRate, foxPreyConversion, foxMortalityRate, carryCapacity;
+
+
+
+  cout << "What is the initial fox and rabbit population?" << endl;
+
+
+  getline(cin, input);
+
+  spaceCheck = false;
+  commaCheck = false;
+
+  for(int i = 0; i <= input.length(); i++)
+    {
+      if(input[i] == ' ')
+    {
+      spaceCheck = true;
+    }
+
+      else if(input[i] == ',')
+    {
+      commaCheck = true;
+    }
+
+    }
+
+  if(commaCheck != true && spaceCheck != true)
+    {
+      cout << "Please enter populations in this format: #, #" << endl;
+      return 0;
+    }
+
+  secondNum = false;
+
+
+  for(int i = 0; i <= input.length(); i++)
+    {
+
+      if(numRabbitsStr.length() == 0 && secondNum == false)
+    {
+      numRabbitsStr = input[i];
+    }
+
+     else if(input[i] == ',' && secondNum == false)
+    {
+      for(int j = 0; j < numRabbitsStr.length(); j++)
+        {
+          if(!isdigit(numRabbitsStr[j]))
+        {
+          cout << "Please enter populations in this format: #, #" << endl;
+          return 0;
+        }
+        }
+
+      if(input[i+1] != ' ')
+        {
+          cout << "Please enter populations in this format: #, #" << endl;
+          return 0;
+        }
+    }
+
+     else if(input[i] == ' ' && secondNum == false)
+        {
+      if(input[i-1] != ',')
+        {
+          cout << "Please enter populations in this format: #, #" << endl;
+          return 0;
+        }
+      secondNum = true;
+        }
+
+
+     else if(numRabbitsStr.length() > 0 && secondNum == false)
+        {
+          numRabbitsStr += input[i];
+        }
+
+     else if(secondNum == true && numFoxesStr.length() == 0)
+        {
+      numFoxesStr = input[i];
+        }
+
+     else if(secondNum == true && numFoxesStr.length() > 0)
+       {
+     numFoxesStr += input[i];
+       }
+
+     else
+       {
+     cout << "Please enter populations in this format: #, #" << endl;
+     return 0;
+       }
+    }
+
+  for(int i = 0; i < numFoxesStr.length()-1; i++)
+    {
+
+      if(!isdigit(numFoxesStr[i]))
+    {
+      cout << "Please enter populations in this format: #, #" << endl;
+      return 0;
+    }
+    }
+
+  stringstream stream(numRabbitsStr);
+
+  stream >> numRabbits;
+
+  stringstream stream2(numFoxesStr);
+
+  stream2 >> numFoxes;
+
+  steps = 0;
+  stepsPointer = &steps;
+
+  rabbitGrowth = 0.2;
+  predationRate = 0.002;
+  foxPreyConversion = 0.6;
+  foxMortalityRate = 0.2;
+  carryCapacity = 1000.0;
+
+  while(numRabbits >= 1 && numFoxes >= 1 && steps <= 500)
+    {
+
+      updatePopulations(rabbitGrowth, carryCapacity, predationRate, foxMortalityRate, foxPreyConversion, numRabbits, numFoxes);
+      incrementCounter(stepsPointer);
+
+    }
+
+
+        return 0;
+
+
+
+}
+
+
+void updatePopulations(double g, double K, double p, double m, double c, double &numRabbits, double &numFoxes)
+{
+  numRabbits += ((g*numRabbits)*(1-(numRabbits/K)))-(p*numRabbits*numFoxes);
+  numFoxes +=  (c*p*numRabbits*numFoxes)-(m*numFoxes);
+  double scale = 0.1;
+
+  charting(numRabbits, numFoxes,  scale);
+}
+
+void charting(double numRabbits, double numFoxes, double scale)
+{
+  char Fox = 'F';
+  char Rabbit = 'r';
+  char both = '*';
+
+  double scaledRabbits = floor(numRabbits * scale);
+  double scaledFoxes = floor(numFoxes * scale);
+
+  if(scaledRabbits != scaledFoxes)
+    {
+      if(scaledRabbits > scaledFoxes)
+    {
+      plotCharacter(scaledFoxes, Fox);
+      plotCharacter((scaledRabbits - scaledFoxes), Rabbit);
+    }
+
+      else if(scaledFoxes > scaledRabbits)
+    {
+      plotCharacter(scaledRabbits, Rabbit);
+      plotCharacter((scaledFoxes - scaledRabbits), Fox);
+    }
+
+      cout << endl;
+    }
+
+  else
+    {
+      plotCharacter(scaledRabbits, both);
+      cout << endl;
+    }
+
+}
+
+void incrementCounter(int* pointer)
+{
+  *pointer = *pointer + 1;
+
+}
+
+void plotCharacter(int number, char character)
+{
+
+  for(int i = 0; i <= number - 1; i++)
+    {
+      cout << ' ';
+    }
+
+  cout << character;
+}

@@ -1,0 +1,14 @@
+INPUT(
+./release\main.o
+./release\sprizzite.o
+./release\model.o
+./release\filedialog.o
+./release\pixelcanvas.o
+./release\sprite.o
+./release\viewport.o
+./release\qrc_buttons.o
+./release\qrc_previewbuttons.o
+./release\moc_sprizzite.o
+./release\moc_model.o
+./release\moc_filedialog.o
+);

@@ -1,0 +1,243 @@
+{
+    "hoopLocationX": 1150.0,
+    "hoopLocationY": 300.0,
+    "hoopSize": 145.0,
+    "hoopTexture" : ":/textures/textures/rim.png",
+    "rimWidth": 30.0,
+    "rimHeight" : 30.0,
+    "ballRadius": 25.0,
+    "leftBound": -1000.0,
+    "topBound": -2000.0,
+    "rightBound": 2000.0,
+    "botBound": 5000.0,
+    "ballLocationX": 100.0,
+    "ballLocationY": 400.0,
+    "ballWidth": 50.0,
+    "ballHeight": 48.0,
+    "ballDensity": 0.03,
+    "ballFriction": 0.3,
+    "ballRestitution": 0.5,
+  "gravity": 0.0,
+  "launcherType" : 0,
+  "ballPath" : ":/textures/textures/ball.png",
+  "bgimg" : ":/textures/textures/Moon-and-Earth.png",
+  "polyObjects" : [
+        {
+      "size" : 4,
+      "vertices" : [
+               {
+                      "x" : -400.0,
+                      "y" : 0.0
+               }, {
+                      "x" : -400.0,
+                      "y" : 50.0
+               }, {
+                      "x" : 750.0,
+                      "y" : 50.0
+               }, {
+                      "x" : 750.0,
+                      "y" : 0.0
+               }
+  ],
+      "xVal" : 200.0,
+      "yVal" : 550.0,
+      "texturePath" : ":/textures/textures/metal.png",
+      "density" : 1,
+      "restitution" : -1,
+      "dynamic" : 0,
+      "friction" : 0.5,
+      "tag" : "obs"
+    },
+
+    {
+    "size" : 4,
+    "vertices" : [
+             {
+                    "x" : 0.0,
+                    "y" : 0.0
+             }, {
+                    "x" : 0.0,
+                    "y" : 10.0
+             }, {
+                    "x" : 1280.0,
+                    "y" : 10.0
+             }, {
+                    "x" : 1280.0,
+                    "y" : 0.0
+             }
+],
+    "xVal" : 0.0,
+    "yVal" : 0.0,
+    "texturePath" : ":/textures/textures/metal.png",
+    "density" : 1,
+    "restitution" : -1,
+    "dynamic" : 0,
+    "friction" : 0.5,
+    "tag" : "obs"
+  },
+
+
+
+
+
+    {
+      "size" : 4,
+      "vertices" : [
+           {
+                  "x" : 0.0,
+                  "y" : 0.0
+           }, {
+                  "x" : 0.0,
+                  "y" : 360.0
+           }, {
+                  "x" : 50.0,
+                  "y" : 360.0
+           }, {
+                  "x" : 50.0,
+                  "y" : 0.0
+           }
+    ],
+      "xVal" : 400.0,
+      "yVal" : 190.0,
+      "texturePath" : ":/textures/textures/metal.png",
+      "density" : 1,
+      "restitution" : -1,
+      "dynamic" : 0,
+      "friction" : 0.5,
+      "tag" : "obs"
+    },
+
+
+{
+  "size" : 3,
+  "vertices" : [
+       {
+              "x" : 0.0,
+              "y" : 0.0
+       }, {
+              "x" : 0.0,
+              "y" : 50.0
+       }, {
+              "x" : 300.0,
+              "y" : 50.0
+       }
+],
+  "xVal" : 450.0,
+  "yVal" : 500.0,
+  "texturePath" : ":/textures/textures/metal.png",
+  "density" : 1,
+  "restitution" : -1,
+  "dynamic" : 0,
+  "friction" : 0.5,
+  "tag" : "obs"
+},
+
+
+    {
+      "size" : 4,
+      "vertices" : [
+           {
+                  "x" : 0.0,
+                  "y" : 0.0
+           }, {
+                  "x" : 0.0,
+                  "y" : 350.0
+           }, {
+                  "x" : 50.0,
+                  "y" : 350.0
+           }, {
+                  "x" : 50.0,
+                  "y" : 0.0
+           }
+    ],
+      "xVal" : 900.0,
+      "yVal" : 200.0,
+      "texturePath" : ":/textures/textures/metal.png",
+      "density" : 1,
+      "restitution" : -1,
+      "dynamic" : 0,
+      "friction" : 0.5,
+      "tag" : "obs"
+    },
+
+    {
+    "size" : 4,
+    "vertices" : [
+             {
+                    "x" : 0.0,
+                    "y" : -200.0
+             }, {
+                    "x" : 0.0,
+                    "y" : 200.0
+             }, {
+                    "x" : 50.0,
+                    "y" : 200.0
+             }, {
+                    "x" : 50.0,
+                    "y" : -200.0
+             }
+    ],
+    "xVal" : 700.0,
+    "yVal" : 200.0,
+    "texturePath" : ":/textures/textures/metal.png",
+    "density" : 1,
+    "restitution" : -1,
+    "dynamic" : 0,
+    "friction" : 0.5,
+    "tag" : "obs"
+    },
+    {
+    "size" : 3,
+    "vertices" : [
+             {
+                    "x" : 0.0,
+                    "y" : -200.0
+             }, {
+                    "x" : 0.0,
+                    "y" : -150.0
+             }, {
+                    "x" : 350.0,
+                    "y" : -200.0
+             }
+    ],
+    "xVal" : 750.0,
+    "yVal" : 210.0,
+    "texturePath" : ":/textures/textures/metal.png",
+    "density" : 1,
+    "restitution" : -1,
+    "dynamic" : 0,
+    "friction" : 0.5,
+    "tag" : "obs"
+    },
+    {
+    "size" : 4,
+    "vertices" : [
+             {
+                    "x" : 0.0,
+                    "y" : 0.0
+             }, {
+                    "x" : 0.0,
+                    "y" : 200.0
+             }, {
+                    "x" : 27.0,
+                    "y" : 200.0
+             }, {
+                    "x" : 27.0,
+                    "y" : -200.0
+             }
+    ],
+    "xVal" : 1232.0,
+    "yVal" : 20.0,
+    "texturePath" : ":/textures/textures/metal.png",
+    "density" : 1,
+    "restitution" : -1,
+    "dynamic" : 0,
+    "friction" : 0.5,
+    "tag" : "obs"
+    }
+
+
+
+
+  ]
+}

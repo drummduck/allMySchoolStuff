@@ -1,0 +1,322 @@
+The system is: Linux - 3.10.0-123.el7.x86_64 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /usr/bin/cc 
+Build flags: 
+Id flags: 
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is GNU, found in "/home/ndonalds/CS3505/A2/libharu/CMakeFiles/3.4.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_30168/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_30168.dir/build.make CMakeFiles/cmTC_30168.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30168.dir/testCCompiler.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_30168.dir/testCCompiler.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/testCCompiler.c
+Linking C executable cmTC_30168
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_30168.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_30168.dir/testCCompiler.c.o  -o cmTC_30168 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_d4601/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_d4601.dir/build.make CMakeFiles/cmTC_d4601.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o   -c /usr/local/stow/cmake/cmake-3.4.1/share/cmake-3.4/Modules/CMakeCCompilerABI.c
+Linking C executable cmTC_d4601
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4601.dir/link.txt --verbose=1
+/usr/bin/cc      -v CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o  -o cmTC_d4601 -rdynamic  
+Using built-in specs.
+COLLECT_GCC=/usr/bin/cc
+COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper
+Target: x86_64-redhat-linux
+Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux
+Thread model: posix
+gcc version 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) 
+COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/
+LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/
+COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d4601' '-rdynamic' '-mtune=generic' '-march=x86-64'
+ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d4601 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/local/bin/gmake" "cmTC_d4601/fast"]
+  ignore line: [/usr/local/bin/gmake -f CMakeFiles/cmTC_d4601.dir/build.make CMakeFiles/cmTC_d4601.dir/build]
+  ignore line: [gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp']
+  ignore line: [Building C object CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/usr/bin/cc     -o CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o   -c /usr/local/stow/cmake/cmake-3.4.1/share/cmake-3.4/Modules/CMakeCCompilerABI.c]
+  ignore line: [Linking C executable cmTC_d4601]
+  ignore line: [/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d4601.dir/link.txt --verbose=1]
+  ignore line: [/usr/bin/cc      -v CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o  -o cmTC_d4601 -rdynamic  ]
+  ignore line: [Using built-in specs.]
+  ignore line: [COLLECT_GCC=/usr/bin/cc]
+  ignore line: [COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/lto-wrapper]
+  ignore line: [Target: x86_64-redhat-linux]
+  ignore line: [Configured with: ../configure --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugzilla.redhat.com/bugzilla --enable-bootstrap --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-linker-hash-style=gnu --enable-languages=c,c++,objc,obj-c++,java,fortran,ada,go,lto --enable-plugin --enable-initfini-array --disable-libgcj --with-isl=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/isl-install --with-cloog=/builddir/build/BUILD/gcc-4.8.5-20150702/obj-x86_64-redhat-linux/cloog-install --enable-gnu-indirect-function --with-tune=generic --with-arch_32=x86-64 --build=x86_64-redhat-linux]
+  ignore line: [Thread model: posix]
+  ignore line: [gcc version 4.8.5 20150623 (Red Hat 4.8.5-4) (GCC) ]
+  ignore line: [COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/]
+  ignore line: [LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/4.8.5/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../:/lib/:/usr/lib/]
+  ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_d4601' '-rdynamic' '-mtune=generic' '-march=x86-64']
+  link line: [ /usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2 --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -export-dynamic -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_d4601 /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../.. CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o -lgcc --as-needed -lgcc_s --no-as-needed -lc -lgcc --as-needed -lgcc_s --no-as-needed /usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o /usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o]
+    arg [/usr/libexec/gcc/x86_64-redhat-linux/4.8.5/collect2] ==> ignore
+    arg [--build-id] ==> ignore
+    arg [--no-add-needed] ==> ignore
+    arg [--eh-frame-hdr] ==> ignore
+    arg [--hash-style=gnu] ==> ignore
+    arg [-m] ==> ignore
+    arg [elf_x86_64] ==> ignore
+    arg [-export-dynamic] ==> ignore
+    arg [-dynamic-linker] ==> ignore
+    arg [/lib64/ld-linux-x86-64.so.2] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_d4601] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crt1.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crti.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtbegin.o] ==> ignore
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64]
+    arg [-L/lib/../lib64] ==> dir [/lib/../lib64]
+    arg [-L/usr/lib/../lib64] ==> dir [/usr/lib/../lib64]
+    arg [-L/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..]
+    arg [CMakeFiles/cmTC_d4601.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [-lc] ==> lib [c]
+    arg [-lgcc] ==> lib [gcc]
+    arg [--as-needed] ==> ignore
+    arg [-lgcc_s] ==> lib [gcc_s]
+    arg [--no-as-needed] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/crtend.o] ==> ignore
+    arg [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64/crtn.o] ==> ignore
+  remove lib [gcc]
+  remove lib [gcc_s]
+  remove lib [gcc]
+  remove lib [gcc_s]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5] ==> [/usr/lib/gcc/x86_64-redhat-linux/4.8.5]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../../../lib64] ==> [/usr/lib64]
+  collapse library dir [/lib/../lib64] ==> [/lib64]
+  collapse library dir [/usr/lib/../lib64] ==> [/usr/lib64]
+  collapse library dir [/usr/lib/gcc/x86_64-redhat-linux/4.8.5/../../..] ==> [/usr/lib]
+  implicit libs: [c]
+  implicit dirs: [/usr/lib/gcc/x86_64-redhat-linux/4.8.5;/usr/lib64;/lib64;/usr/lib]
+  implicit fwks: []
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_a9716/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_a9716.dir/build.make CMakeFiles/cmTC_a9716.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9716.dir/feature_tests.c.o
+/usr/bin/cc    -std=c11 -o CMakeFiles/cmTC_a9716.dir/feature_tests.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/feature_tests.c
+Linking C executable cmTC_a9716
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a9716.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_a9716.dir/feature_tests.c.o  -o cmTC_a9716 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_c2e71/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_c2e71.dir/build.make CMakeFiles/cmTC_c2e71.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c2e71.dir/feature_tests.c.o
+/usr/bin/cc    -std=c99 -o CMakeFiles/cmTC_c2e71.dir/feature_tests.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/feature_tests.c
+Linking C executable cmTC_c2e71
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c2e71.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_c2e71.dir/feature_tests.c.o  -o cmTC_c2e71 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_00ebc/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_00ebc.dir/build.make CMakeFiles/cmTC_00ebc.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00ebc.dir/feature_tests.c.o
+/usr/bin/cc    -std=c90 -o CMakeFiles/cmTC_00ebc.dir/feature_tests.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/feature_tests.c
+Linking C executable cmTC_00ebc
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_00ebc.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_00ebc.dir/feature_tests.c.o  -o cmTC_00ebc -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if files dlfcn.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_34389/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_34389.dir/build.make CMakeFiles/cmTC_34389.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_34389.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_34389.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_34389
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_34389.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_34389.dir/CheckIncludeFiles.c.o  -o cmTC_34389 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files inttypes.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_2d953/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_2d953.dir/build.make CMakeFiles/cmTC_2d953.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_2d953.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_2d953.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_2d953
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2d953.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_2d953.dir/CheckIncludeFiles.c.o  -o cmTC_2d953 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files memory.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_e76a9/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_e76a9.dir/build.make CMakeFiles/cmTC_e76a9.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e76a9.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_e76a9.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_e76a9
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e76a9.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_e76a9.dir/CheckIncludeFiles.c.o  -o cmTC_e76a9 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_9dc14/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_9dc14.dir/build.make CMakeFiles/cmTC_9dc14.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9dc14.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_9dc14.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_9dc14
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9dc14.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_9dc14.dir/CheckIncludeFiles.c.o  -o cmTC_9dc14 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files stdlib.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_62601/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_62601.dir/build.make CMakeFiles/cmTC_62601.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_62601.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_62601.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_62601
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_62601.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_62601.dir/CheckIncludeFiles.c.o  -o cmTC_62601 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files strings.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_1ba2d/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_1ba2d.dir/build.make CMakeFiles/cmTC_1ba2d.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1ba2d.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_1ba2d.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_1ba2d
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1ba2d.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_1ba2d.dir/CheckIncludeFiles.c.o  -o cmTC_1ba2d -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files string.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_ee3ef/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_ee3ef.dir/build.make CMakeFiles/cmTC_ee3ef.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ee3ef.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_ee3ef.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_ee3ef
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ee3ef.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_ee3ef.dir/CheckIncludeFiles.c.o  -o cmTC_ee3ef -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_6ffc3/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_6ffc3.dir/build.make CMakeFiles/cmTC_6ffc3.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6ffc3.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_6ffc3.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_6ffc3
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6ffc3.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_6ffc3.dir/CheckIncludeFiles.c.o  -o cmTC_6ffc3 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_16b68/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_16b68.dir/build.make CMakeFiles/cmTC_16b68.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_16b68.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_16b68.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_16b68
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_16b68.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_16b68.dir/CheckIncludeFiles.c.o  -o cmTC_16b68 -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+
+Determining if files unistd.h exist passed with the following output:
+Change Dir: /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/local/bin/gmake" "cmTC_beeca/fast"
+/usr/local/bin/gmake -f CMakeFiles/cmTC_beeca.dir/build.make CMakeFiles/cmTC_beeca.dir/build
+gmake[1]: Entering directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_beeca.dir/CheckIncludeFiles.c.o
+/usr/bin/cc     -o CMakeFiles/cmTC_beeca.dir/CheckIncludeFiles.c.o   -c /home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+Linking C executable cmTC_beeca
+/usr/local/stow/cmake/cmake-3.4.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_beeca.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTC_beeca.dir/CheckIncludeFiles.c.o  -o cmTC_beeca -rdynamic 
+gmake[1]: Leaving directory '/home/ndonalds/CS3505/A2/libharu/CMakeFiles/CMakeTmp'
+
+

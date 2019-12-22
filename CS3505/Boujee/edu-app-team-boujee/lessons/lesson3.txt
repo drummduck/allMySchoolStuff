@@ -1,0 +1,164 @@
+{
+    "gravity" : 9.8,
+    "ballPath" : ":/textures/textures/ball.png",
+    "ballRadius" : 25.0,
+    "leftBound" : -1000.0,
+    "topBound" : -1000.0,
+    "rightBound" : 2000.0,
+    "botBound" : 5000.0,
+    "ballLocationX" : 100.0,
+    "ballLocationY" : 680.0,
+    "ballWidth" : 50.0,
+    "ballHeight" : 50.0,
+    "ballDensity" : 0.01,
+    "ballFriction" : 0.3,
+    "ballRestitution" : 0.7,
+    "launcherAngle": 70,
+    "launcherMagnitude": 7,
+    "launcherType" : 0,
+    "bgimg" : ":/textures/textures/jazzStadium.png",
+    "textBoxes" : [
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "It's me, Boujee the cat again. Let's combine are \n knowledge of gravity, and other forces!",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "In the first lesson we saw how forces can be \n applied to things to make them move from rest.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        },
+        {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "In the second we saw how gravity affects objects \n like the boujee ball by pulling them into the earth.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Let's combine the two! Using our cannon you can\napply your own force to the ball besides gravity.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Let's break down how the cannon's force and gravity relate.\nMeow!",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Gravity is simply a downward force in the Boujee world. \nYour vertical force must overcome gravity, \nwhile your horizontal force must be strong enough to get to the hoop.",
+            "textSize" : 23,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "By selecting your angle, you are applying your selected force \nas two components. Horizontal and vertical.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "For example, with a 45 degree angle you have an equal amount of \nyour force in the horizontal and an equal amount in \nthe vertical, spread over two components.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "This is because 45 degrees is perfectly in between horizontal \n(0 degrees) and vertical(90 degrees).",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Other angles have a different proportion based on how close the angle is to\neither vertical or horizontal.",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }, {
+            "xVal" : 100.0,
+            "yVal" : 100.0,
+            "text" : "Let's try this out in practice by making a basket with the\nboujee ball! MEEEOOOW!",
+            "textSize" : 25,
+            "r" : 0,
+            "g" : 0,
+            "b" : 0,
+            "a" : 255,
+            "hasContinue" : true
+        }
+
+    ],
+    "polyObjects" : [
+          {
+            "size" : 4,
+            "vertices" : [
+                   {
+                          "x" : 0.0,
+                          "y" : 0.0
+                   }, {
+                          "x" : 0.0,
+                          "y" : 20.0
+                   }, {
+                          "x" : 800.0,
+                          "y" : 20.0
+                   }, {
+                          "x" : 800.0,
+                          "y" : 0.0
+                   }
+            ],
+            "xVal" : 300.0,
+            "yVal" : 680.0,
+            "texturePath" : ":/textures/textures/brickTexture.png",
+            "density" : 1,
+            "restitution" : 0,
+            "dynamic" : 0,
+            "friction" : 0.5,
+            "tag" : "obs"
+          }
+    ]
+}

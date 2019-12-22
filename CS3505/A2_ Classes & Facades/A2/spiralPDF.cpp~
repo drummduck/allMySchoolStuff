@@ -1,0 +1,83 @@
+//test cpp
+
+#include "Spiral.h"
+#include <iostream>
+#include <stdlib.h>
+#include <string.h>
+#include <math.h>
+
+using namespace std;
+
+
+int main(int argc, char **argv)
+{
+    HaruPDF haru;
+    HaruPDF haru2;
+    Spiral spiral(210,300,50);
+    Spiral spiral2(210,300,50);
+    const char* Text;
+    unsigned i;
+    double textAngle, spiralAngle, x, y, textAngle2, spiralAngle2, x2, y2;
+    const char* fileName = "spiralPDF.pdf";
+    const char* fileName2 = "spiralPDF2.pdf";
+
+    if(argc >= 3)
+    {
+        cout << "Please use the format: ./executable \"text to be used\"" << endl;
+
+        return 0;
+    }
+
+    else if(argc > 1)
+    {
+        Text = argv[1];
+    }
+
+    else
+    {
+        cout << "Please use the format: ./executable \"Your text here\"" << endl;
+    }
+
+    haru.createDoc();
+
+    for (i = 0; i < strlen (Text); i++)
+    {
+
+        spiral++;
+
+        textAngle = spiral.get_text_angle();
+        spiralAngle = spiral.get_spiral_angle();
+        x = spiral.get_text_x();
+        y = spiral.get_text_y();
+
+        haru.setText(i, Text, textAngle, spiralAngle, x, y);
+
+        cout << spiral;
+
+    }
+
+    haru.saveFile(fileName);
+
+    haru2.createDoc();
+
+    for (i = 0; i < strlen (Text); i++)
+    {
+
+        ++spiral2;
+
+        textAngle2 = spiral2.get_text_angle();
+        spiralAngle2 = spiral2.get_spiral_angle();
+        x2 = spiral2.get_text_x();
+        y2 = spiral2.get_text_y();
+
+        haru2.setText(i, Text, textAngle2, spiralAngle2, x2, y2);
+
+        cout << spiral2;
+
+    }
+
+    haru2.saveFile(fileName2);
+
+return 0;
+
+}

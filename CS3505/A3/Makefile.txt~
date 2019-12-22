@@ -1,0 +1,20 @@
+# Makefile for Trie.h, Trie.cpp, TrieTest.cpp, as well as the TrieTest executable.
+
+CC = g++
+CFLAGS = -Wall -std=c++11
+
+LIBHARU = ../libharu/src
+INCLUDE = ../libharu/include
+CURRENT = .
+
+TrieTest : Trie.o TrieTest.cpp
+				$(CC) $(CFLAGS) -o TrieTest TrieTest.cpp Trie.o
+
+Trie.o : Trie.cpp $(CURRENT)/Trie.h 
+				$(CC) $(CFLAGS) -I$(CURRENT) -c Trie.cpp 
+
+clean:
+	rm TrieTest *.o
+
+test:
+	./TrieTest

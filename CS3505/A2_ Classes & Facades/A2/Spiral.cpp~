@@ -1,0 +1,102 @@
+//Spiral cpp bitch
+
+#include "Spiral.h"
+#include <string.h>
+#include <math.h>
+#include <stdlib.h>
+#include <iostream>
+
+using namespace std;
+
+Spiral::Spiral(double centerX, double centerY, double radius) : centerX(centerX), centerY(centerY), radius(radius) {}
+
+void Spiral::operator++(int dummy)
+{
+
+
+    //angle of letter, how far around circle, x & y coordinates,
+    float spiralAngle;
+
+    //angle of letter
+    textAngle = ((angle - 90) / 180 * M_PI);
+    //rad2 is how far around circle
+    spiralAngle = (angle / 180 * M_PI);
+
+    //x & y coordinates of character.
+    centerX = 306 + cos(spiralAngle) * radius;
+    centerY = 396 + sin(spiralAngle) * radius;
+
+
+    angle -= 12;
+    radius += 1.5;
+
+
+}
+
+void Spiral::operator++()
+{
+
+    //angle of letter, how far around circle, x & y coordinates,
+    float spiralAngle;
+
+    //angle of letter
+    textAngle = ((angle - 90) / 180 * M_PI);
+    //rad2 is how far around circle
+    spiralAngle = (angle / 180 * M_PI);
+
+    //x & y coordinates of character.
+    centerX = 306 + cos(spiralAngle) * radius;
+    centerY = 396 + sin(spiralAngle) * radius;
+
+
+
+
+    angle -= 12;
+    radius += 1.5;
+
+    //angle of letter, how far around circle, x & y coordinates,
+
+    //angle of letter
+    textAngle = ((angle - 90) / 180 * M_PI);
+    //rad2 is how far around circle
+    spiralAngle = (angle / 180 * M_PI);
+
+    //x & y coordinates of character.
+    centerX = 306 + cos(spiralAngle) * radius;
+    centerY = 396 + sin(spiralAngle) * radius;
+
+
+    angle -= 12;
+    radius += 1.5;
+
+
+
+    }
+
+double Spiral::get_text_x()
+{
+    return centerX;
+}
+double Spiral::get_text_y()
+{
+    return centerY;
+}
+double Spiral::get_spiral_angle()
+{
+    return radius;
+}
+double Spiral::get_text_angle()
+{
+  return textAngle;
+}
+
+ostream& operator<<(ostream& output, Spiral spiral)
+{
+
+    output << "The x position is: " << spiral.get_text_x() << endl;
+    output << "The y position is: " << spiral.get_text_y() << endl;
+    output << "The spiral angle is: " << spiral.get_spiral_angle() << endl;
+    output << "The text angle is: " << (spiral.get_text_angle() * (180/M_PI)) << endl << endl;
+
+    return output;
+}
